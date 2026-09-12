@@ -1782,11 +1782,7 @@ private static void drawPass(MinecraftClient client, boolean translucent) {
 	setEffectUniforms(client, cfg);
 	setTerrainLights(client, cfg);
 
-	boolean underwater =
-			client.gameRenderer
-					.getCamera()
-					.getSubmersionType()
-					== net.minecraft.block.enums.CameraSubmersionType.WATER;
+	boolean underwater = isCameraInWaterVolume(client);
 
 	GL20.glUniform1i(
 			uCameraUnderwater,
@@ -7671,7 +7667,7 @@ private static void dayNightTint(long timeOfDay, float[] out) {
 	/** Light view-projection from the sun's position (time of day) + dayFactor (0 at night). */
 	private static void updateSceneLightingState(MinecraftClient client, MoneyakShadersConfig cfg) {
 		SCENE_LIGHTING.computeFromWorld(client, cfg);
-		boolean underwater = client.gameRenderer.getCamera().getSubmersionType() == net.minecraft.block.enums.CameraSubmersionType.WATER;
+		boolean underwater = isCameraInWaterVolume(client);
 		SCENE_LIGHTING.setWaterState(underwater, Float.NEGATIVE_INFINITY);
 		Vector3f dir = SCENE_LIGHTING.activeDirection();
 		Vector3f color = SCENE_LIGHTING.activeColor();
@@ -7680,6 +7676,13 @@ private static void dayNightTint(long timeOfDay, float[] out) {
 		sunUpFactor = SCENE_LIGHTING.directSunStrength;
 		celestialMoon = SCENE_LIGHTING.moonLighting;
 		celestialR = color.x; celestialG = color.y; celestialB = color.z;
+	}
+
+	/** Whether the camera is actually submerged. Air pockets around doors and chests stay air. */
+	public static boolean isCameraInWaterVolume(MinecraftClient client) {
+		return client != null && client.gameRenderer != null
+				&& client.gameRenderer.getCamera().getSubmersionType()
+						== net.minecraft.block.enums.CameraSubmersionType.WATER;
 	}
 	/** Build cascade {@code idx}: ortho of half-size {@code s} from the sun + per-cascade texel snap. */
 	private static void buildCascade(int idx) {

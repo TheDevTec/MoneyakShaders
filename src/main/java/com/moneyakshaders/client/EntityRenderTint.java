@@ -63,8 +63,7 @@ public final class EntityRenderTint {
 	public static void beginBlockEntityAt(double x, double y, double z) {
 		int tint = ExperimentalSectionRender.lightTintAt(x, y, z);
 		MinecraftClient client = MinecraftClient.getInstance();
-		if (client != null && client.gameRenderer != null
-				&& client.gameRenderer.getCamera().getSubmersionType() == net.minecraft.block.enums.CameraSubmersionType.WATER) {
+		if (ExperimentalSectionRender.isCameraInWaterVolume(client)) {
 			tint = multiply(tint, 0xFF5A92A6);
 		}
 		push(tint);

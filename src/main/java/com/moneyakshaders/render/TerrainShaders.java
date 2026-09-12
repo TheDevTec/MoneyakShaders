@@ -509,6 +509,11 @@ private static final String MAIN_FS = """
 			if(uTranslucent==0&&dither>reveal)discard;
 
 			if(uTranslucent==1&&water){
+				// Keep vertical faces: they are the visible boundary of the real air pocket around
+				// a non-waterloggable block.  A downward-facing fluid quad, however, has no physical
+				// surface in a submerged volume and is the source of the striped "water bubbles"
+				// projected onto block undersides.
+				if(uCameraUnderwater==1&&N.y<-0.70)discard;
 				vec4 wt=shadeWater(N);
 				wt.a*=reveal;
 				if(uOit==1){

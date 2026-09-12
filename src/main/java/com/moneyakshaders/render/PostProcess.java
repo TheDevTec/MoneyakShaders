@@ -388,8 +388,7 @@ public final class PostProcess {
 
 	public static void run(MinecraftClient client) {
 		MoneyakShadersConfig cfg = MoneyakShadersConfig.get();
-		boolean underwater = client.gameRenderer != null
-				&& client.gameRenderer.getCamera().getSubmersionType() == net.minecraft.block.enums.CameraSubmersionType.WATER;
+		boolean underwater = ExperimentalSectionRender.isCameraInWaterVolume(client);
 		boolean post = cfg.postProcessing;
 		boolean debug = cfg.postDebugView != 0;
 		if (!post && !underwater && !debug) return;

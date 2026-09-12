@@ -888,9 +888,17 @@ public final class McSectionMesher {
         BlockState bsEast = missingEast ? blockState : world.getBlockState(scratch.set(wx + 1, wy, wz));
         FluidState fsEast = bsEast.getFluidState();
 
-        boolean renderTop = !isSameFluid(fluidState, fsUp);
-        boolean renderBottom = shouldRenderSide(fluidState, blockState, Direction.DOWN, fsDown)
-                && !shouldSkipRendering(Direction.DOWN, FLUID_FULL, bsDown);
+		// A fluid cell below a full opaque block is still physically part of the same water
+		// volume. Rendering its 8/9-high top face leaves a thin fake air layer under every
+		// submerged block. Non-full objects (doors, chests, fences) deliberately keep their
+		// visible water boundary, because that is the real air pocket around the object.
+		boolean renderTop = !isSameFluid(fluidState, fsUp) && (lava || !bsUp.isOpaqueFullCube());
+		// Preserve the lower rim of a real air pocket around a non-full object. A bottom quad below
+		// a full opaque block is instead the unwanted thin underwater bubble and is omitted.
+		// Lava keeps its underside because a suspended/falling lava sheet is visibly bounded there.
+		boolean renderBottom = (lava || !bsDown.isOpaqueFullCube())
+				&& shouldRenderSide(fluidState, blockState, Direction.DOWN, fsDown)
+				&& !shouldSkipRendering(Direction.DOWN, FLUID_FULL, bsDown);
         boolean rN = shouldRenderSide(fluidState, blockState, Direction.NORTH, fsNorth);
         boolean rS = shouldRenderSide(fluidState, blockState, Direction.SOUTH, fsSouth);
         boolean rW = shouldRenderSide(fluidState, blockState, Direction.WEST, fsWest);
