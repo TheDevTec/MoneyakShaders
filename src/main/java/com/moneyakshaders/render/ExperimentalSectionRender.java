@@ -17,14 +17,17 @@ import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColors;
 import net.minecraft.client.gl.Framebuffer;
+import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.block.BlockRenderManager;
 import net.minecraft.client.render.model.ModelBaker;
 import net.minecraft.client.texture.GlTexture;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.SpriteAtlasTexture;
 import net.minecraft.block.BlockState;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkSectionPos;
+import net.minecraft.util.math.Direction;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
@@ -483,6 +486,7 @@ public final class ExperimentalSectionRender {
 	private static int uDepthOnly;
 	private static int uWind;
 	private static int uHeldLight;
+	private static int uHeldPos;
 	private static int uHeldRadius;
 	private static int uOreGlow;
 	private static long shaderStartMs;
@@ -6135,9 +6139,10 @@ private static void drawPass(MinecraftClient client, boolean translucent) {
 		int cand = 0;
 		float[] ed = DynamicLightSources.renderData(client);
 		int en = DynamicLightSources.count();
-		// Skip the LOCAL player's held light: uHeldLight already fills for it — now that the uLights loop
-		// adds dynFill, keeping it here would light the ground around the player twice.
-		for (int i = DynamicLightSources.firstIsLocalHeld() ? 1 : 0; i < en && cand < LIGHT_CAND_MAX; i++) {
+		// Entry zero is the local held light. It has a dedicated, unshadowed terrain
+		// path because a retained point-shadow cubemap cannot follow the player.
+		int start = DynamicLightSources.firstIsLocalHeld() ? 1 : 0;
+		for (int i = start; i < en && cand < LIGHT_CAND_MAX; i++) {
 			System.arraycopy(ed, i * 7, lightCand, cand * 7, 7);
 			cand++;
 		}
@@ -6159,7 +6164,11 @@ private static void drawPass(MinecraftClient client, boolean translucent) {
 			if (i < 0) continue;
 			int o = i * 7;
 			lightPosBuf.put(lightCand[o] - (float) capCamX).put(lightCand[o + 1] - (float) capCamY).put(lightCand[o + 2] - (float) capCamZ).put(lightCand[o + 3]);
-			float scale = lightCand[o + 3] / 15f * 0.25f; // gentle: stacked lights are clamped in the FS too
+			// Dynamic sources are rendered without a retained cubemap. Give one moving
+			// torch/entity enough direct energy to light actual surrounding blocks;
+			// their radius falloff prevents distant or separate sources from whitening
+			// the whole scene.
+			float scale = lightCand[o + 3] / 15f * 0.50f;
 			lightColBuf.put(lightCand[o + 4] * scale).put(lightCand[o + 5] * scale).put(lightCand[o + 6] * scale);
 			chosen++;
 		}
@@ -6252,6 +6261,13 @@ private static void setEffectUniforms(MinecraftClient client, MoneyakShadersConf
 			heldLight(client, HELD_LIGHT);
 			GL20.glUniform3f(uHeldLight, HELD_LIGHT[0], HELD_LIGHT[1], HELD_LIGHT[2]);
 			GL20.glUniform1f(uHeldRadius, HELD_LIGHT[3]);
+			float[] dynamic = DynamicLightSources.renderData(client);
+			if (DynamicLightSources.firstIsLocalHeld() && dynamic.length >= 3) {
+				GL20.glUniform3f(uHeldPos, dynamic[0] - (float) capCamX,
+						dynamic[1] - (float) capCamY, dynamic[2] - (float) capCamZ);
+			} else {
+				GL20.glUniform1f(uHeldRadius, 0f);
+			}
 		} else GL20.glUniform1f(uHeldRadius, 0f);
 	}
 
@@ -6793,24 +6809,9 @@ private static void dayNightTint(long timeOfDay, float[] out) {
 		float[] d = DynamicLightSources.renderData(client);
 		boolean[] embeddedSources = DynamicLightSources.embeddedSources();
 		int n = DynamicLightSources.count();
-		for (int i = 0; i < n && nc < CAND_MAX - SCAN_MAX; i++) {
-			int o = i * 7;
-			if (d[o + 3] < 6f) {
-				continue;
-			}
-			candX[nc] = d[o]; candY[nc] = d[o + 1]; candZ[nc] = d[o + 2];
-			candLvl[nc] = d[o + 3]; candDyn[nc] = true;
-			candEmbedded[nc] = i < embeddedSources.length && embeddedSources[i];
-			candSolid[nc] = false;
-			candFaceMask[nc] = 0x3F;
-			float colorScale = d[o + 3] / 15f * 0.25f;
-			// Local held, remote held and dropped sources now share the same visibility-gated direct
-			// path. uHeldLight remains only as the no-point-shadow configuration fallback.
-			candR[nc] = d[o + 4] * colorScale;
-			candG[nc] = d[o + 5] * colorScale;
-			candB[nc] = d[o + 6] * colorScale;
-			nc++;
-		}
+		// Dynamic sources are shaded directly with their live interpolated positions.
+		// Do not allocate them a retained point-shadow slot: while their terrain map
+		// is stale or absent it suppresses light on the blocks it should illuminate.
 		if (--heroScanCooldown <= 0 || Math.abs(cx - scanOriginX) > 4.0 || Math.abs(cy - scanOriginY) > 4.0
 				|| Math.abs(cz - scanOriginZ) > 4.0) {
 			refreshRegisteredPlacedLights(cx, cy, cz);
@@ -7684,6 +7685,24 @@ private static void dayNightTint(long timeOfDay, float[] out) {
 				&& client.gameRenderer.getCamera().getSubmersionType()
 						== net.minecraft.block.enums.CameraSubmersionType.WATER;
 	}
+
+	/**
+	 * The camera can sit in the legitimate one-block air pocket made by a door or chest. The player
+	 * remains in air, but the world seen through the pocket's water wall must still receive the
+	 * underwater medium. This is intentionally separate from {@link #isCameraInWaterVolume}: fluid
+	 * geometry needs the latter so it keeps the visible pocket boundary.
+	 */
+	public static boolean isCameraInsideSubmergedPocket(MinecraftClient client) {
+		if (isCameraInWaterVolume(client)) return true;
+		if (client == null || client.gameRenderer == null || client.world == null) return false;
+		Camera camera = client.gameRenderer.getCamera();
+		BlockPos centre = BlockPos.ofFloored(camera.getCameraPos());
+		int surroundingWater = 0;
+		for (Direction direction : Direction.Type.HORIZONTAL) {
+			if (client.world.getFluidState(centre.offset(direction)).isIn(FluidTags.WATER)) surroundingWater++;
+		}
+		return surroundingWater >= 3 && client.world.getFluidState(centre.up()).isIn(FluidTags.WATER);
+	}
 	/** Build cascade {@code idx}: ortho of half-size {@code s} from the sun + per-cascade texel snap. */
 	private static void buildCascade(int idx) {
 		float sx = sunDirX, sy = sunDirY, sz = sunDirZ;
@@ -8275,6 +8294,7 @@ private static void dayNightTint(long timeOfDay, float[] out) {
 			uDepthOnly = GL20.glGetUniformLocation(program, "uDepthOnly");
 			uWind = GL20.glGetUniformLocation(program, "uWind");
 			uHeldLight = GL20.glGetUniformLocation(program, "uHeldLight");
+			uHeldPos = GL20.glGetUniformLocation(program, "uHeldPos");
 			uHeldRadius = GL20.glGetUniformLocation(program, "uHeldRadius");
 			uOreGlow = GL20.glGetUniformLocation(program, "uOreGlow");
 			shaderStartMs = System.currentTimeMillis();

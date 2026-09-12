@@ -88,6 +88,7 @@ private static final String FS_HEADER = """
 		uniform float uPointShadowStr;
 
 		uniform vec3 uHeldLight;
+		uniform vec3 uHeldPos;
 		uniform float uHeldRadius;
 		uniform int uLightCount;
 		uniform vec4 uLights[32];
@@ -146,7 +147,7 @@ private static final String COMMON_LIB = """
 		}
 
 		bool waterMaterial(float mat){
-			return (mat>3.5&&mat<4.5)||(mat>9.5&&mat<10.5);
+			return (mat>3.5&&mat<4.5)||(mat>9.5&&mat<10.5)||(mat>12.5&&mat<13.5);
 		}
 
 		bool foliageMaterial(float mat){
@@ -466,10 +467,13 @@ private static final String POINT_LIGHT_LIB = """
 			return result*0.25;
 		}
 
-		// LocalLightSet is the only local-direct energy path.  Point shadows modulate
-		// this exact contribution; they never add a second light.
+		// Retained point-shadow maps belong exclusively to placed sources. Moving
+		// sources (entities, dropped items and held lamps) are evaluated directly
+		// every frame: a cached cubemap cannot move with its origin.
 		vec3 localDirect(vec3 N,vec3 albedo){
 			vec3 result=vec3(0.0);
+			vec3 placedDirect=vec3(0.0);
+			vec3 movingDirect=vec3(0.0);
 			for(int i=0;i<8;i++){
 				float r=uPointData[i].w;
 				if(r<=0.01)continue;
@@ -482,7 +486,42 @@ private static final String POINT_LIGHT_LIB = """
 				float att=1.0-d2/(r*r);
 				att*=att;
 				float visibility=mix(1.0,pointDepthVisibility(i,vWorldRel,N),saturate(uPointShadowStr));
-				result+=albedo*uPointCols[i]*att*(0.18+0.82*ndl)*visibility*uPointFade[i]*0.52;
+				placedDirect+=albedo*uPointCols[i]*att*(0.18+0.82*ndl)*visibility*uPointFade[i]*0.52;
+			}
+			// Several lamps enrich the same pool of light, but must not sum linearly
+			// into an all-white facade. Compress only their extra shader energy;
+			// vanilla propagated block light remains responsible for the base level.
+			float placedPeak=max3(placedDirect);
+			result+=placedDirect/(1.0+placedPeak*1.25);
+			for(int i=0;i<32;i++){
+				if(i>=uLightCount)break;
+				float r=uLights[i].w;
+				if(r<=0.01)continue;
+				vec3 delta=uLights[i].xyz-vWorldRel;
+				float d2=dot(delta,delta);
+				if(d2>=r*r)continue;
+				float d=sqrt(max(d2,0.0001));
+				float att=1.0-d2/(r*r);
+				att*=att;
+				float ndl=max(dot(N,delta/d),0.0);
+				movingDirect+=albedo*uLightCols[i]*att*(0.28+0.72*ndl)*0.85;
+			}
+			float movingPeak=max3(movingDirect);
+			result+=movingDirect/(1.0+movingPeak*0.75);
+			if(uHeldRadius>0.01){
+				vec3 delta=uHeldPos-vWorldRel;
+				float d2=dot(delta,delta);
+				float r=uHeldRadius;
+				if(d2<r*r){
+					float d=sqrt(max(d2,0.0001));
+					vec3 L=delta/d;
+					float ndl=max(dot(N,L),0.0);
+					float att=1.0-d2/(r*r);
+					att*=att;
+					// Hand light stays readable on vertical faces too, rather than only
+					// producing the old tiny square under the player.
+					result+=albedo*uHeldLight*att*(0.40+0.60*ndl)*0.70;
+				}
 			}
 			return result;
 		}
@@ -509,11 +548,15 @@ private static final String MAIN_FS = """
 			if(uTranslucent==0&&dither>reveal)discard;
 
 			if(uTranslucent==1&&water){
+				// Keep the shell geometrically sealed. A tiny depth-only bias puts water behind a
+				// coplanar block face, preventing z-fighting without opening a visible gap at doors.
+				gl_FragDepth=min(gl_FragCoord.z+0.0000015,1.0);
 				// Keep vertical faces: they are the visible boundary of the real air pocket around
 				// a non-waterloggable block.  A downward-facing fluid quad, however, has no physical
 				// surface in a submerged volume and is the source of the striped "water bubbles"
 				// projected onto block undersides.
-				if(uCameraUnderwater==1&&N.y<-0.70)discard;
+				bool pocketWater=vMat>12.5&&vMat<13.5;
+				if(uCameraUnderwater==1&&!pocketWater&&N.y<-0.70)discard;
 				vec4 wt=shadeWater(N);
 				wt.a*=reveal;
 				if(uOit==1){
@@ -762,7 +805,7 @@ static final String FS = FS_HEADER+COMMON_LIB+SHADOW_LIB+WATER_LIB+POINT_LIGHT_L
 			+ "uniform sampler2D uWaterWaveTex; uniform float uTime;\n"
 			+ "layout(location=0) out vec4 oWater;\n"
 			+ "void main(){\n"
-			+ "  bool water=(vMat>3.5&&vMat<4.5)||(vMat>9.5&&vMat<10.5); if(!water)discard;\n"
+			+ "  bool water=(vMat>3.5&&vMat<4.5)||(vMat>9.5&&vMat<10.5)||(vMat>12.5&&vMat<13.5); if(!water)discard;\n"
 			+ "  oWater=vec4(0.48,0.0,0.0,1.0);\n"
 			+ "}\n";
 

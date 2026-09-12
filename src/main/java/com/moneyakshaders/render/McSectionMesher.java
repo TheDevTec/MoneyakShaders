@@ -108,9 +108,11 @@ public final class McSectionMesher {
      * emitter's own faces; a position-only AABB cut also clipped adjacent wall/floor fragments on the
      * shared boundary and produced a persistent bright seam. */
     public static final int MAT_EMISSIVE_SOLID = 12;
+    /** The lower boundary of a real air pocket below a non-waterloggable block entity. */
+    public static final int MAT_WATER_POCKET = 13;
 
     public static boolean isWaterMaterial(int material) {
-        return material == MAT_WATER || material == MAT_WATER_ICE;
+        return material == MAT_WATER || material == MAT_WATER_ICE || material == MAT_WATER_POCKET;
     }
 
     /**
@@ -814,9 +816,12 @@ public final class McSectionMesher {
 
     private static final float FLUID_FULL = 0.8888889F; // vanilla source-block surface height
 
-    /** Keep a fluid face far enough from a coplanar partial block to stay above distant depth-buffer
-     * precision. Open-air waterfall faces remain flush, so this cannot open a slit between streams. */
-    private static final float FACE_INSET = 0.0015F;
+	/**
+	 * Fluid geometry stays exactly on the cell boundary so an air pocket around a door/chest is a
+	 * closed volume. Coplanar texture conflicts are resolved by the water fragment depth bias instead
+	 * of moving this face inward — an inset leaves a visible slit through the pocket wall.
+	 */
+	private static final float FACE_INSET = 0.0F;
 
     private static float frame(float lo, float hi, float f) {
         return lo + f * (hi - lo);
@@ -989,7 +994,10 @@ public final class McSectionMesher {
 		// complete cell consistently; stabilising only the top left the darker animated side texture as
 		// a one-block outline around every flow level.
         int waterMat = lava ? MAT_DEFAULT : (waterOnIce ? MAT_WATER_ICE : MAT_WATER);
-        int botMat = waterMat, sideTopMat = waterMat, sideBotMat = waterMat;
+        // This face is the deliberate ceiling of a door/chest air pocket. It must survive the
+        // underwater-only bottom-face rejection in the fragment shader; ordinary water bottoms do not.
+        int botMat = !lava && renderBottom && !bsDown.isOpaqueFullCube() ? MAT_WATER_POCKET : waterMat;
+        int sideTopMat = waterMat, sideBotMat = waterMat;
 
         // --- bottom face ---
         if (renderBottom) {

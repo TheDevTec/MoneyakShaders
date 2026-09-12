@@ -343,10 +343,13 @@ public final class DynamicLightSources {
 			out[0] = out[1] = out[2] = out[3] = 0f;
 			return;
 		}
-		out[0] = current[4] * 0.7f;
-		out[1] = current[5] * 0.7f;
-		out[2] = current[6] * 0.7f;
-		out[3] = current[3] + 2.0f;
+		// A held lamp follows the same calibrated energy/range as one placed lamp.
+		// It is rendered directly (to avoid a stale moving cubemap), not as a
+		// stronger category of light.
+		out[0] = current[4] * 0.5f;
+		out[1] = current[5] * 0.5f;
+		out[2] = current[6] * 0.5f;
+		out[3] = current[3];
 	}
 
 	/** Rebuild the source list from entities near the camera. Call once per client tick. */
