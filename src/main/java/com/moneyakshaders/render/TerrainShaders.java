@@ -374,7 +374,7 @@ private static final String WATER_LIB = """
 			vec2 uv=(gl_FragCoord.xy+vec2(0.5))/max(uScreenSize,vec2(1.0));
 			float depth=texture(uWaterSceneDepth,uv).r;
 			vec3 viewPos=(uView*vec4(vWorldRel,1.0)).xyz;
-			vec3 behind=depth<0.99997?viewFromDepth(uv,depth):viewPos+normalize(viewPos)*48.0;
+			vec3 behind=depth<0.99997?viewFromDepth(uv,depth):viewPos;
 			float thickness=clamp(length(behind)-length(viewPos),0.0,48.0);
 
 			vec3 viewN=normalize(mat3(uView)*N);
@@ -414,6 +414,10 @@ private static final String WATER_LIB = """
 			vec3 L=activeLightDir();
 			float spec=waterSpecular(N,V,L)*activeLightStrength()*directionalVisibility(N)*mix(0.25,1.55,saturate(uWaterSpecular));
 			surface+=activeLightColor()*min(spec,1.8);
+			float nightWater=saturate(1.0-uDayFactor*3.0);
+			if(uCelestialMoon>0.5)nightWater=max(nightWater,0.65);
+			surface*=mix(vec3(1.0),vec3(0.52,0.68,0.82),nightWater);
+			surface*=mix(1.0,0.68,nightWater);
 
 			float opacity=mix(0.96,0.48,saturate(uWaterTransparency));
 			float alpha=clamp(opacity+(1.0-exp(-thickness*0.10))*0.24+fresnel*0.10+foam*0.12,0.46,0.98);
@@ -505,10 +509,6 @@ private static final String MAIN_FS = """
 			if(uTranslucent==0&&dither>reveal)discard;
 
 			if(uTranslucent==1&&water){
-				// Below the surface, vertical/bottom fluid faces are internal boundaries around
-				// doors and other non-waterloggable geometry. The post-water medium already
-				// supplies the volume; only an actual upward-facing surface should remain visible.
-				if(uCameraUnderwater==1&&N.y<0.70)discard;
 				vec4 wt=shadeWater(N);
 				wt.a*=reveal;
 				if(uOit==1){

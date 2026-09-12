@@ -816,7 +816,7 @@ public final class McSectionMesher {
 
     /** Keep a fluid face far enough from a coplanar partial block to stay above distant depth-buffer
      * precision. Open-air waterfall faces remain flush, so this cannot open a slit between streams. */
-    private static final float FACE_INSET = 0.0075F;
+    private static final float FACE_INSET = 0.0015F;
 
     private static float frame(float lo, float hi, float f) {
         return lo + f * (hi - lo);
