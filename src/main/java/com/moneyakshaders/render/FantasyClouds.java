@@ -2,19 +2,34 @@ package com.moneyakshaders.render;
 
 import com.mojang.blaze3d.opengl.GlStateManager;
 import com.moneyakshaders.MoneyakShaders;
-import com.moneyakshaders.MoneyakShadersConfig;
 import org.joml.Matrix4f;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL14;
+import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
+import org.lwjgl.opengl.GL31;
+import org.lwjgl.opengl.GL33;
 import org.lwjgl.system.MemoryStack;
+import org.lwjgl.system.MemoryUtil;
 
 public final class FantasyClouds {
 	private static final float CLOUD_BASE = 184f;
-	private static final float CLOUD_TOP = 310f;
+	private static final float CLOUD_TOP = 236f;
+	/*
+	 * The visual cloud pass intentionally follows Better Clouds' geometry model:
+	 * a stable, noise-sampled field of instanced cloud voxels.  The old pass
+	 * raymarched a thin density slab, which made a single threshold read as
+	 * horizontal cut-off strips instead of cloud bodies.
+	 */
+	private static final float CLOUD_SPACING = 20f;
+	private static final float CLOUD_SIZE_XZ = 38f;
+	private static final float CLOUD_SIZE_Y = 4.5f;
+	private static final float CLOUD_RENDER_DISTANCE = 1080f;
+	private static final int CLOUD_GRID_RADIUS = (int)(CLOUD_RENDER_DISTANCE / CLOUD_SPACING);
+	private static final long CLOUD_SEED = 0x4d6f6e6579616bL;
 	private static final int SHADOW_RES = 256;
 	private static final float SHADOW_WORLD_SIZE = 2048f;
 	private static final float SHADOW_CENTER_SNAP = 32f;
@@ -30,9 +45,65 @@ public final class FantasyClouds {
 			}
 			""";
 
+	private static final String MESH_VS = """
+			#version 330 core
+			layout(location=0) in vec3 aVertex;
+			layout(location=1) in vec3 aNormal;
+			layout(location=2) in vec3 aCloud;
+			uniform mat4 uProjection;
+			uniform mat4 uView;
+			uniform vec3 uCamera;
+			uniform float uTime;
+			uniform float uSpeed;
+			out vec3 vNormal;
+			out vec3 vWorld;
+			void main(){
+				vec3 wind=vec3(uTime*uSpeed*1.85,0.0,uTime*uSpeed*0.54);
+				vec3 world=aCloud+wind+aVertex*vec3(38.0,4.5,38.0);
+				vNormal=aNormal;
+				vWorld=world;
+				// The captured terrain view matrix consumes camera-relative vertices.
+				// Supplying absolute world coordinates here translated the entire cloud
+				// field a second time, leaving it visible in only one sky quadrant.
+				gl_Position=uProjection*uView*vec4(world-uCamera,1.0);
+			}
+			""";
+
+	private static final String MESH_FS = """
+			#version 330 core
+			in vec3 vNormal;
+			in vec3 vWorld;
+			out vec4 f;
+			uniform vec3 uCamera;
+			uniform vec3 uLightDir;
+			uniform vec3 uDirectColor;
+			uniform vec3 uAmbientColor;
+			uniform float uDirectStrength;
+			uniform float uMoon;
+			uniform float uRain;
+			uniform float uSilver;
+			void main(){
+				float distanceToCloud=length(vWorld.xz-uCamera.xz);
+				// Do not use a near-camera fade: it creates an artificial empty halo
+				// that makes clouds appear to run away from the player.
+				float fade=1.0;
+				if(fade<0.01) discard;
+				vec3 L=normalize(uLightDir);
+				float sun=max(dot(normalize(vNormal),L),0.0);
+				float rim=pow(max(dot(normalize(vWorld-uCamera),L),0.0),7.0)*uSilver;
+				vec3 ambient=uAmbientColor*mix(0.42,0.68,1.0-uMoon);
+				vec3 direct=uDirectColor*uDirectStrength*(0.20+sun*0.80);
+				vec3 color=ambient+direct+uDirectColor*rim*0.35;
+				color=mix(color,color*0.70,clamp(uRain,0.0,1.0));
+				// Several thin layers may overlap; keep every individual slab airy
+				// so the result stays bright and wispy instead of a solid dark island.
+				f=vec4(max(color,vec3(0.0)),0.38*fade);
+			}
+			""";
+
 	static final String SHARED_FIELD_GLSL = """
 			const float CLOUD_BASE=184.0;
-			const float CLOUD_TOP=310.0;
+			const float CLOUD_TOP=236.0;
 
 			float cloudHash3(vec3 p){
 				p=fract(p*0.1031);
@@ -75,9 +146,13 @@ public final class FantasyClouds {
 
 			float cloudHeightProfile(float y){
 				float h=clamp((y-CLOUD_BASE)/(CLOUD_TOP-CLOUD_BASE),0.0,1.0);
-				float bottom=smoothstep(0.015,0.145,h);
-				float top=1.0-smoothstep(0.58,0.985,h);
-				return bottom*top;
+				// A compact three-deck profile: low fragments give the clouds a readable
+				// underside, while the two upper decks build chunky Minecraft-scale volume
+				// instead of one very tall, smoke-like slab.
+				float bottom=smoothstep(0.035,0.17,h);
+				float top=1.0-smoothstep(0.70,0.97,h);
+				float deck=mix(0.72,1.0,step(0.34,h));
+				return bottom*top*deck;
 			}
 
 			vec3 cloudWindOffset(){
@@ -101,14 +176,23 @@ public final class FantasyClouds {
 
 				vec3 q=p+cloudWindOffset();
 				float weather=cloudWeather(p);
-				float body=cloudFbm(q*vec3(0.0042,0.0095,0.0042));
-				float detail=cloudNoise3(q*vec3(0.015,0.029,0.015)+vec3(17.0,4.0,-9.0));
-
+				// A cloudlet is a broad 105x105-block column with a variable 20–48 block
+				// crown, not a stack of shallow horizontal tiles. This gives each bank a
+				// visible underside, body and crest when viewed from the ground.
+				vec2 column=floor(q.xz*0.0095);
+				float blocks=cloudHash3(vec3(column,11.0));
+				float bank=cloudNoise3(vec3(q.xz*0.0027,6.3));
 				float h=clamp((p.y-CLOUD_BASE)/(CLOUD_TOP-CLOUD_BASE),0.0,1.0);
-				float threshold=0.625-uCloudCover*0.205-(weather-0.5)*0.135+h*0.038;
-				float density=smoothstep(threshold,threshold+0.095,body*0.84+detail*0.16);
+				float crown=0.36+cloudHash3(vec3(column,29.0))*0.56;
+				float puffBottom=smoothstep(0.035,0.18,h);
+				float puffTop=1.0-smoothstep(crown-0.17,crown,h);
+				float threshold=0.750-uCloudCover*0.245-(weather-0.5)*0.16;
+				float field=bank*0.80+blocks*0.20;
+				// Narrow transition preserves a readable blocky silhouette rather than
+				// the previous screen-wide fuzzy/dithered noise.
+				float density=smoothstep(threshold,threshold+0.035,field);
 
-				return density*profile*uCloudDensity;
+				return density*profile*puffBottom*puffTop*uCloudDensity;
 			}
 
 			float cloudLightVisibility(vec3 p,vec3 L){
@@ -293,9 +377,12 @@ public final class FantasyClouds {
 			}
 			""";
 
-	private static int program, shadowProgram, vao;
+	private static int program, shadowProgram, vao, cloudVao, cloudMeshVbo, cloudInstanceVbo;
+	private static int cloudInstances;
+	private static int cloudGridX = Integer.MIN_VALUE, cloudGridZ = Integer.MIN_VALUE;
+	private static float cloudGridCover = Float.NaN, cloudGridDensity = Float.NaN;
 	private static int shadowFbo, shadowTex;
-	private static int uInvProj, uInvView, uCamWorld, uLightDir, uDirectColor, uAmbientColor;
+	private static int uProjection, uView, uCamWorld, uLightDir, uDirectColor, uAmbientColor;
 	private static int uCloudTime, uCloudCover, uCloudDensity, uCloudSpeed, uCloudSelfShadow;
 	private static int uDirectStrength, uMoon, uSilver, uRain;
 	private static int suShadowCenter, suLightDir, suCloudTime, suCloudCover, suCloudDensity, suCloudSpeed;
@@ -311,7 +398,10 @@ public final class FantasyClouds {
 	private FantasyClouds() {}
 
 	public static boolean isSupported() {
-		return true;
+		// The procedural mesh experiment did not maintain vanilla's world-space
+		// traversal contract.  Until a replacement has that guarantee, the active
+		// path is Minecraft's own physical cloud renderer.
+		return false;
 	}
 
 	public static int shadowTexture() {
@@ -345,14 +435,13 @@ public final class FantasyClouds {
 	public static void render(Matrix4f proj, Matrix4f view, double camX, double camY, double camZ,
 			float timeSec, SceneLightingSnapshot lighting) {
 		if (!init) init();
-		if (program == 0) return;
+		if (program == 0 || cloudVao == 0) return;
 
-		MoneyakShadersConfig cfg = MoneyakShadersConfig.get();
-		float cover = clamp01(cfg.cloudCoverage / 100f);
-		float density = 0.55f + clamp01(cfg.cloudDensity / 100f) * 0.85f;
-		float silver = clamp01(cfg.cloudSilverLining / 100f);
-		float shadow = clamp01(cfg.cloudShadowStrength / 100f);
-		float speed = 0.18f + clamp01(cfg.cloudSpeed / 100f) * 0.82f;
+		float cover = 0.48f;
+		float density = 1.0f;
+		float silver = 0.68f;
+		float shadow = 0.68f;
+		float speed = 0.50f;
 		float moonFactor = lighting.moonLighting ? 1f : 0f;
 
 		updateShadowMap(camX, camZ, timeSec, cover, density, speed, shadow,
@@ -370,8 +459,11 @@ public final class FantasyClouds {
 		int srcA = GL11.glGetInteger(GL14.GL_BLEND_SRC_ALPHA);
 		int dstA = GL11.glGetInteger(GL14.GL_BLEND_DST_ALPHA);
 
+		ensureCloudGeometry((float)camX, (float)camZ, timeSec, speed, cover, density);
+		if (cloudInstances == 0) return;
+
 		GlStateManager._glUseProgram(program);
-		GL30.glBindVertexArray(vao);
+		GL30.glBindVertexArray(cloudVao);
 		GlStateManager._enableDepthTest();
 		GlStateManager._depthFunc(GL11.GL_LEQUAL);
 		GlStateManager._depthMask(false);
@@ -380,12 +472,9 @@ public final class FantasyClouds {
 				GL11.GL_ONE, GL11.GL_ONE_MINUS_SRC_ALPHA);
 		GlStateManager._disableCull();
 
-		INV_PROJ.set(proj).invert();
-		INV_VIEW.set(view).invert();
-
 		try (MemoryStack stack = MemoryStack.stackPush()) {
-			GL20.glUniformMatrix4fv(uInvProj, false, INV_PROJ.get(stack.mallocFloat(16)));
-			GL20.glUniformMatrix4fv(uInvView, false, INV_VIEW.get(stack.mallocFloat(16)));
+			GL20.glUniformMatrix4fv(uProjection, false, proj.get(stack.mallocFloat(16)));
+			GL20.glUniformMatrix4fv(uView, false, view.get(stack.mallocFloat(16)));
 		}
 
 		float directStrength = clamp01(lighting.directStrength);
@@ -404,7 +493,7 @@ public final class FantasyClouds {
 		GL20.glUniform1f(uSilver, silver);
 		GL20.glUniform1f(uRain, lighting.rainFactor);
 
-		GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, 3);
+		GL31.glDrawArraysInstanced(GL11.GL_TRIANGLES, 0, 36, cloudInstances);
 
 		GlStateManager._blendFuncSeparate(srcRgb, dstRgb, srcA, dstA);
 		GlStateManager._depthMask(prevDepthMask);
@@ -498,6 +587,105 @@ public final class FantasyClouds {
 		shadowRevision++;
 	}
 
+	/**
+	 * Port of Better Clouds' important generation rule: sample a stable low-frequency
+	 * cloud field on a grid, vary the column height by the sampled value, then add a
+	 * short lower fill pass.  The grid is rebuilt only after crossing a 18-block cell
+	 * (or when coverage/density changes), so clouds never swim with the camera.
+	 */
+	private static void ensureCloudGeometry(float camX, float camZ, float time, float speed, float cover, float density) {
+		// The mesh vertex shader translates every instance by this wind vector.
+		// Generate in the inverse-translated space so the *visible* cloud field,
+		// not merely its unshifted source grid, remains centred on the player.
+		float windX = time * speed * 1.85f;
+		float windZ = time * speed * 0.54f;
+		int gridX = floorDiv(camX - windX, CLOUD_SPACING);
+		int gridZ = floorDiv(camZ - windZ, CLOUD_SPACING);
+		if (gridX == cloudGridX && gridZ == cloudGridZ
+				&& near(cover, cloudGridCover, 0.002f) && near(density, cloudGridDensity, 0.002f)) return;
+
+		int maximum = (CLOUD_GRID_RADIUS * 2 + 1) * (CLOUD_GRID_RADIUS * 2 + 1) * 2;
+		var points = MemoryUtil.memAllocFloat(maximum * 3);
+		int count = 0;
+		for (int x = -CLOUD_GRID_RADIUS; x <= CLOUD_GRID_RADIUS; x++) {
+			for (int z = -CLOUD_GRID_RADIUS; z <= CLOUD_GRID_RADIUS; z++) {
+				int cellX = gridX + x;
+				int cellZ = gridZ + z;
+				float worldX = cellX * CLOUD_SPACING;
+				float worldZ = cellZ * CLOUD_SPACING;
+				// Better Clouds samples a stable world grid rather than a camera-facing
+				// billboard.  Keep that property, but deliberately bound each cloud bank:
+				// an unbounded regional threshold was the cause of one giant colony on
+				// one side of the sky and empty space everywhere else.
+				int regionX = Math.floorDiv(cellX, 7);
+				int regionZ = Math.floorDiv(cellZ, 7);
+				if (hash01(regionX, regionZ, 211) > 0.23f + cover * 0.42f) continue;
+				float centerX = regionX * 7f + 1.0f + hash01(regionX, regionZ, 223) * 5.0f;
+				float centerZ = regionZ * 7f + 1.0f + hash01(regionX, regionZ, 227) * 5.0f;
+				float radius = 2.25f + hash01(regionX, regionZ, 229) * 1.9f;
+				float dx = cellX - centerX, dz = cellZ - centerZ;
+				float angle = hash01(regionX, regionZ, 233) * (float)(Math.PI * 2.0);
+				float longAxis = dx * (float)Math.cos(angle) + dz * (float)Math.sin(angle);
+				float shortAxis = -dx * (float)Math.sin(angle) + dz * (float)Math.cos(angle);
+				float stretch = 1.55f + hash01(regionX, regionZ, 239) * 1.55f;
+				float radial = 1f - (float)Math.sqrt((longAxis / stretch) * (longAxis / stretch) + shortAxis * shortAxis) / radius;
+				float detail = valueNoise(cellX * 0.21f, cellZ * 0.21f, 31) * 0.42f
+						+ valueNoise(cellX * 0.065f, cellZ * 0.065f, 47) * 0.58f;
+				float value = radial * (0.74f + detail * 0.38f);
+				if (value <= 0f || hash01(cellX, cellZ, 101) > Math.min(1f, value + 0.12f * density)) continue;
+
+				float height = value * value * 8f;
+				float jitterX = (hash01(cellX, cellZ, 131) - 0.5f) * CLOUD_SPACING * 0.55f;
+				float jitterZ = (hash01(cellX, cellZ, 151) - 0.5f) * CLOUD_SPACING * 0.55f;
+				points.put(worldX + jitterX).put(CLOUD_BASE + height).put(worldZ + jitterZ);
+				count++;
+				// A second close layer produces the soft stacked streaks from the
+				// reference without turning the cloud into a tall opaque column.
+				if (value > 0.48f && count < maximum) {
+					points.put(worldX + jitterX + CLOUD_SPACING * 0.28f).put(CLOUD_BASE + height + CLOUD_SIZE_Y * 0.78f).put(worldZ + jitterZ - CLOUD_SPACING * 0.18f);
+					count++;
+				}
+			}
+		}
+		points.flip();
+		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, cloudInstanceVbo);
+		GL15.glBufferData(GL15.GL_ARRAY_BUFFER, points, GL15.GL_DYNAMIC_DRAW);
+		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
+		MemoryUtil.memFree(points);
+		cloudInstances = count;
+		cloudGridX = gridX;
+		cloudGridZ = gridZ;
+		cloudGridCover = cover;
+		cloudGridDensity = density;
+	}
+
+	private static int floorDiv(float value, float divisor) {
+		return (int)Math.floor(value / divisor);
+	}
+
+	private static float hash01(int x, int z, int salt) {
+		long h = CLOUD_SEED;
+		h ^= (long)x * 0x9E3779B97F4A7C15L;
+		h ^= (long)z * 0xC2B2AE3D27D4EB4FL;
+		h ^= (long)salt * 0x165667B19E3779F9L;
+		h ^= h >>> 30;
+		h *= 0xBF58476D1CE4E5B9L;
+		h ^= h >>> 27;
+		h *= 0x94D049BB133111EBL;
+		h ^= h >>> 31;
+		return (float)((h >>> 40) & 0xFFFFFFL) / 16777215f;
+	}
+
+	private static float valueNoise(float x, float z, int salt) {
+		int ix = (int)Math.floor(x), iz = (int)Math.floor(z);
+		float fx = x - ix, fz = z - iz;
+		fx = fx * fx * (3f - 2f * fx);
+		fz = fz * fz * (3f - 2f * fz);
+		float a = hash01(ix, iz, salt), b = hash01(ix + 1, iz, salt);
+		float c = hash01(ix, iz + 1, salt), d = hash01(ix + 1, iz + 1, salt);
+		return mix(mix(a, b, fx), mix(c, d, fx), fz);
+	}
+
 	private static void ensureShadowTarget() {
 		if (shadowFbo != 0 && shadowTex != 0) return;
 
@@ -540,14 +728,15 @@ public final class FantasyClouds {
 		init = true;
 
 		try {
-			program = GlShader.build(VS, FS);
+			program = GlShader.build(MESH_VS, MESH_FS);
 			shadowProgram = GlShader.build(VS, SHADOW_FS);
 			if (program == 0) return;
 
 			vao = GL30.glGenVertexArrays();
+			initCloudMesh();
 
-			uInvProj = GL20.glGetUniformLocation(program, "uInvProj");
-			uInvView = GL20.glGetUniformLocation(program, "uInvView");
+			uProjection = GL20.glGetUniformLocation(program, "uProjection");
+			uView = GL20.glGetUniformLocation(program, "uView");
 			uCamWorld = GL20.glGetUniformLocation(program, "uCamWorld");
 			uLightDir = GL20.glGetUniformLocation(program, "uLightDir");
 			uDirectColor = GL20.glGetUniformLocation(program, "uDirectColor");
@@ -574,13 +763,50 @@ public final class FantasyClouds {
 				suMoon = GL20.glGetUniformLocation(shadowProgram, "uMoon");
 			}
 
-			MoneyakShaders.LOGGER.info("[Plan C/GL] volumetric cloud programs linked (cloud={}, shadow={})",
+			MoneyakShaders.LOGGER.info("[Plan C/GL] instanced Better-Clouds-style cloud programs linked (cloud={}, shadow={})",
 					program, shadowProgram);
 		} catch (Throwable t) {
 			MoneyakShaders.LOGGER.warn("[Plan C/GL] volumetric cloud init failed", t);
 			program = 0;
 			shadowProgram = 0;
 		}
+	}
+
+	private static void initCloudMesh() {
+		// position xyz, outward normal xyz.  Kept as independent triangles so all
+		// cube faces remain valid even where an adjacent sampled cell is absent.
+		float[] cube = {
+				-.5f,-.5f,-.5f, 0,-1,0,   .5f,-.5f, .5f, 0,-1,0,   .5f,-.5f,-.5f, 0,-1,0,
+				-.5f,-.5f,-.5f, 0,-1,0,  -.5f,-.5f, .5f, 0,-1,0,   .5f,-.5f, .5f, 0,-1,0,
+				-.5f,.5f,-.5f, 0,1,0,    .5f,.5f,-.5f, 0,1,0,    .5f,.5f, .5f, 0,1,0,
+				-.5f,.5f,-.5f, 0,1,0,    .5f,.5f, .5f, 0,1,0,   -.5f,.5f, .5f, 0,1,0,
+				-.5f,-.5f,-.5f, 0,0,-1,  .5f,-.5f,-.5f, 0,0,-1,  .5f,.5f,-.5f, 0,0,-1,
+				-.5f,-.5f,-.5f, 0,0,-1,  .5f,.5f,-.5f, 0,0,-1, -.5f,.5f,-.5f, 0,0,-1,
+				-.5f,-.5f,.5f, 0,0,1,    .5f,.5f,.5f, 0,0,1,    .5f,-.5f,.5f, 0,0,1,
+				-.5f,-.5f,.5f, 0,0,1,   -.5f,.5f,.5f, 0,0,1,    .5f,.5f,.5f, 0,0,1,
+				-.5f,-.5f,-.5f, -1,0,0, -.5f,.5f,-.5f, -1,0,0, -.5f,.5f,.5f, -1,0,0,
+				-.5f,-.5f,-.5f, -1,0,0, -.5f,.5f,.5f, -1,0,0, -.5f,-.5f,.5f, -1,0,0,
+				.5f,-.5f,-.5f, 1,0,0,   .5f,-.5f,.5f, 1,0,0,   .5f,.5f,.5f, 1,0,0,
+				.5f,-.5f,-.5f, 1,0,0,   .5f,.5f,.5f, 1,0,0,    .5f,.5f,-.5f, 1,0,0
+		};
+		cloudVao = GL30.glGenVertexArrays();
+		cloudMeshVbo = GL15.glGenBuffers();
+		cloudInstanceVbo = GL15.glGenBuffers();
+		GL30.glBindVertexArray(cloudVao);
+		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, cloudMeshVbo);
+		var mesh = MemoryUtil.memAllocFloat(cube.length).put(cube).flip();
+		GL15.glBufferData(GL15.GL_ARRAY_BUFFER, mesh, GL15.GL_STATIC_DRAW);
+		MemoryUtil.memFree(mesh);
+		GL20.glVertexAttribPointer(0, 3, GL11.GL_FLOAT, false, 24, 0L);
+		GL20.glEnableVertexAttribArray(0);
+		GL20.glVertexAttribPointer(1, 3, GL11.GL_FLOAT, false, 24, 12L);
+		GL20.glEnableVertexAttribArray(1);
+		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, cloudInstanceVbo);
+		GL20.glVertexAttribPointer(2, 3, GL11.GL_FLOAT, false, 12, 0L);
+		GL20.glEnableVertexAttribArray(2);
+		GL33.glVertexAttribDivisor(2, 1);
+		GL30.glBindVertexArray(0);
+		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 	}
 
 	private static boolean near(float a, float b, float epsilon) {
