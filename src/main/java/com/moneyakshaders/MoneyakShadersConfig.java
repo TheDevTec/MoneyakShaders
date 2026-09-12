@@ -56,11 +56,8 @@ public int waterSpecular = 58;
 public int biomeBlendRadius = 6;
 public int biomeTintVibrance = 106;
 
-public int cloudCoverage = 48;
-public int cloudDensity = 62;
-public int cloudSilverLining = 68;
-public int cloudShadowStrength = 68;
-public int cloudSpeed = 38;
+/** Physical vanilla cloud-plane height in world blocks. */
+public int cloudHeight = 192;
 
 	/**
 	 * Size of the dedicated chunk-mesh building pool. Vanilla runs mesh
@@ -802,11 +799,7 @@ public int pointShadowStrength = 60;
 		changed |= set(c.sunWarmth, clamp(c.sunWarmth, 0, 100), v -> c.sunWarmth = v);
 		changed |= set(c.moonBrightness, clamp(c.moonBrightness, 0, 200), v -> c.moonBrightness = v);
 
-		changed |= set(c.cloudCoverage, clamp(c.cloudCoverage, 0, 100), v -> c.cloudCoverage = v);
-		changed |= set(c.cloudDensity, clamp(c.cloudDensity, 0, 100), v -> c.cloudDensity = v);
-		changed |= set(c.cloudSilverLining, clamp(c.cloudSilverLining, 0, 100), v -> c.cloudSilverLining = v);
-		changed |= set(c.cloudShadowStrength, clamp(c.cloudShadowStrength, 0, 100), v -> c.cloudShadowStrength = v);
-		changed |= set(c.cloudSpeed, clamp(c.cloudSpeed, 0, 200), v -> c.cloudSpeed = v);
+		changed |= set(c.cloudHeight, clamp(c.cloudHeight, 64, 320), v -> c.cloudHeight = v);
 
 		changed |= set(c.postExposure, clamp(c.postExposure, 25, 250), v -> c.postExposure = v);
 		changed |= set(c.postBloom, clamp(c.postBloom, 0, 200), v -> c.postBloom = v);
@@ -878,11 +871,7 @@ public int pointShadowStrength = 60;
 		c.biomeBlendRadius = readInt(p, "biomeBlendRadius", c.biomeBlendRadius);
 		c.biomeTintVibrance = readInt(p, "biomeTintVibrance", c.biomeTintVibrance);
 
-		c.cloudCoverage = readInt(p, "cloudCoverage", c.cloudCoverage);
-		c.cloudDensity = readInt(p, "cloudDensity", c.cloudDensity);
-		c.cloudSilverLining = readInt(p, "cloudSilverLining", c.cloudSilverLining);
-		c.cloudShadowStrength = readInt(p, "cloudShadowStrength", c.cloudShadowStrength);
-		c.cloudSpeed = readInt(p, "cloudSpeed", c.cloudSpeed);
+		c.cloudHeight = readInt(p, "cloudHeight", c.cloudHeight);
 
 		c.shadowMidResolution = readInt(p, "shadowMidResolution", c.shadowMidResolution);
 		c.shadowMidChunks = readInt(p, "shadowMidChunks", c.shadowMidChunks);
@@ -1184,6 +1173,7 @@ public int pointShadowStrength = 60;
 		config.debugCit = readBoolean(properties, "debugCit", config.debugCit);
 		config.oldPackItemAtlasFix = readBoolean(properties, "oldPackItemAtlasFix", config.oldPackItemAtlasFix);
 		config.fantasyClouds = readBoolean(properties, "fantasyClouds", config.fantasyClouds);
+		config.cloudHeight = readInt(properties, "cloudHeight", config.cloudHeight);
 		config.etfEmissive = readBoolean(properties, "etfEmissive", config.etfEmissive);
 		config.entityShadowDistance = readInt(properties, "entityShadowDistance", config.entityShadowDistance);
 		config.dayNightTint = readBoolean(properties, "dayNightTint", config.dayNightTint);
@@ -1454,7 +1444,13 @@ public int pointShadowStrength = 60;
 		properties.setProperty("debugCit", Boolean.toString(config.debugCit));
 		properties.setProperty("oldPackItemAtlasFix", Boolean.toString(config.oldPackItemAtlasFix));
 		properties.remove("aaNearDistance");
+		properties.remove("cloudCoverage");
+		properties.remove("cloudDensity");
+		properties.remove("cloudSilverLining");
+		properties.remove("cloudShadowStrength");
+		properties.remove("cloudSpeed");
 		properties.setProperty("fantasyClouds", Boolean.toString(config.fantasyClouds));
+		properties.setProperty("cloudHeight", Integer.toString(config.cloudHeight));
 		properties.setProperty("etfEmissive", Boolean.toString(config.etfEmissive));
 		properties.setProperty("entityShadowDistance", Integer.toString(config.entityShadowDistance));
 		// The old geometric water-wave option was removed: moving the actual surface by millimetres

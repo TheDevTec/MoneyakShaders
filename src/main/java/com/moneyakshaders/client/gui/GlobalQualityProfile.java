@@ -161,11 +161,6 @@ public enum GlobalQualityProfile {
 		c.sunWarmth = 72;
 		c.moonBrightness = 54;
 
-		c.cloudCoverage = 46;
-		c.cloudDensity = 58;
-		c.cloudSilverLining = 66;
-		c.cloudShadowStrength = 68;
-		c.cloudSpeed = 36;
 
 		c.waterBumpiness = 88;
 		c.waterReflection = 68;
@@ -260,11 +255,6 @@ public enum GlobalQualityProfile {
 		c.sunWarmth = 78;
 		c.moonBrightness = 62;
 
-		c.cloudCoverage = 50;
-		c.cloudDensity = 66;
-		c.cloudSilverLining = 76;
-		c.cloudShadowStrength = 78;
-		c.cloudSpeed = 40;
 
 		c.waterBumpiness = 96;
 		c.waterReflection = 76;

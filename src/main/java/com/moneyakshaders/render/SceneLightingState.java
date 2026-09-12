@@ -649,7 +649,7 @@ final class SceneLightingState {
 		directSunStrength =
 				dayFactor
 						* mix(
-								1.0f,
+								0.84f,
 								0.42f,
 								rainFactor);
 
@@ -689,8 +689,8 @@ final class SceneLightingState {
 		 */
 		float daylightAmbient =
 				mix(
-						0.27f,
-						1.00f,
+						0.26f,
+						0.78f,
 						dayFactor);
 
 		float moonAmbient =
@@ -706,8 +706,8 @@ final class SceneLightingState {
 
 		skyAmbientStrength *=
 				mix(
-						0.42f,
-						1.22f,
+						0.55f,
+						0.90f,
 						ambientSetting);
 
 		/*
@@ -755,8 +755,9 @@ final class SceneLightingState {
 						0.42f,
 						rainFactor);
 
-		cloudShadowStrength =
-				unit(cfg.cloudShadowStrength);
+		// Vanilla's cloud renderer owns its geometry but has no custom projected
+		// shadow texture for the terrain pass, so do not retain a dead slider.
+		cloudShadowStrength = 0f;
 
 		/*
 		 * V noci je cloud shadow na terrainu méně relevantní,

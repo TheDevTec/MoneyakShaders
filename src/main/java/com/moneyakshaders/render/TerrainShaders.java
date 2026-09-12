@@ -474,6 +474,10 @@ private static final String POINT_LIGHT_LIB = """
 			vec3 result=vec3(0.0);
 			vec3 placedDirect=vec3(0.0);
 			vec3 movingDirect=vec3(0.0);
+			// At noon a torch must remain visible, but cannot add its full night-time
+			// energy on top of sunlight and skylight.  This also keeps several lamps
+			// from bleaching a sunlit facade into white.
+			float daylightLocalFade=mix(1.0,0.24,saturate(activeLightStrength()));
 			for(int i=0;i<8;i++){
 				float r=uPointData[i].w;
 				if(r<=0.01)continue;
@@ -486,7 +490,7 @@ private static final String POINT_LIGHT_LIB = """
 				float att=1.0-d2/(r*r);
 				att*=att;
 				float visibility=mix(1.0,pointDepthVisibility(i,vWorldRel,N),saturate(uPointShadowStr));
-				placedDirect+=albedo*uPointCols[i]*att*(0.18+0.82*ndl)*visibility*uPointFade[i]*0.52;
+				placedDirect+=albedo*uPointCols[i]*att*(0.18+0.82*ndl)*visibility*uPointFade[i]*0.52*daylightLocalFade;
 			}
 			// Several lamps enrich the same pool of light, but must not sum linearly
 			// into an all-white facade. Compress only their extra shader energy;
@@ -504,7 +508,7 @@ private static final String POINT_LIGHT_LIB = """
 				float att=1.0-d2/(r*r);
 				att*=att;
 				float ndl=max(dot(N,delta/d),0.0);
-				movingDirect+=albedo*uLightCols[i]*att*(0.28+0.72*ndl)*0.85;
+				movingDirect+=albedo*uLightCols[i]*att*(0.28+0.72*ndl)*0.85*daylightLocalFade;
 			}
 			float movingPeak=max3(movingDirect);
 			result+=movingDirect/(1.0+movingPeak*0.75);
@@ -520,7 +524,7 @@ private static final String POINT_LIGHT_LIB = """
 					att*=att;
 					// Hand light stays readable on vertical faces too, rather than only
 					// producing the old tiny square under the player.
-					result+=albedo*uHeldLight*att*(0.40+0.60*ndl)*0.70;
+					result+=albedo*uHeldLight*att*(0.40+0.60*ndl)*0.70*daylightLocalFade;
 				}
 			}
 			return result;
@@ -585,7 +589,9 @@ private static final String MAIN_FS = """
 			float sky=saturate(vLm.y*1.25-0.08);
 			float block=saturate(vLm.x*1.25-0.08);
 			vec3 ambientColor=mix(shadowAmbientColor(),skyAmbientColor(),0.30+sky*0.70);
-			float ambientStrength=skyAmbientStrength()*(0.055+sky*0.945);
+			// Preserve readable daylight in occluded terrain, without restoring the
+			// previous near-white sky fill on fully exposed surfaces.
+			float ambientStrength=skyAmbientStrength()*(0.080+sky*0.78);
 			float ao=saturate(vAoSway.x);
 			vec3 skyIndirect=albedo*ambientColor*ambientStrength*ao;
 			// Propagated block-light scalar owns local-indirect energy.  Baked tint is

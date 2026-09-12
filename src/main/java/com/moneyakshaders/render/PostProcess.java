@@ -641,8 +641,10 @@ public final class PostProcess {
 		GL20.glUniform1i(bpScene, 0);
 		GL20.glUniform1i(bpShafts, 1);
 		GL20.glUniform1f(bpShaftMix, shafts ? 1f : 0f);
-		GL20.glUniform1f(bpThreshold, 0.82f);
-		GL20.glUniform1f(bpKnee, 0.42f);
+		// Only actual HDR highlights (sun, emissive sources) feed bloom. A low
+		// threshold here made ordinary birch/plaster daylight bloom as if emissive.
+		GL20.glUniform1f(bpThreshold, 1.22f);
+		GL20.glUniform1f(bpKnee, 0.18f);
 		GL11.glDrawArrays(GL11.GL_TRIANGLES, 0, 3);
 
 		GlStateManager._glUseProgram(bloomDownProg);
@@ -696,7 +698,7 @@ public final class PostProcess {
 		GL20.glUniform1i(cShafts, 3);
 		GL20.glUniform2f(cTexel, 1f / w, 1f / h);
 
-		GL20.glUniform1f(cBloomStrength, post ? Math.max(0f, cfg.postBloom / 100f) * 0.86f : 0f);
+		GL20.glUniform1f(cBloomStrength, post ? Math.max(0f, cfg.postBloom / 100f) * 0.52f : 0f);
 		GL20.glUniform1f(cExposure, Math.max(0.05f, cfg.postExposure / 100f));
 		GL20.glUniform1f(cSaturation, Math.max(0f, cfg.postSaturation / 100f));
 		GL20.glUniform1f(cVignette, post ? Math.max(0f, cfg.postVignette / 100f) : 0f);

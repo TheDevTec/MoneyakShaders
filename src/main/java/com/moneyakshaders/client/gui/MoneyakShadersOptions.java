@@ -45,7 +45,7 @@ public final class MoneyakShadersOptions {
 				bool("Water impact FX", "Splash/bubbles for water impacts and underwater interactions. Default: ON", c.waterSplash, v -> c.waterSplash = v),
 				bool("Rain ripples", "Expanding ripple rings where rain hits water. Default: ON", c.rainRipples, v -> c.rainRipples = v),
 				bool("Rain mist", "Soft ground mist during rain. Default: ON", c.rainMist, v -> c.rainMist = v),
-				bool("Fantasy clouds", "Volumetric procedural clouds replacing vanilla clouds. Default: ON", c.fantasyClouds, v -> c.fantasyClouds = v),
+				bool("World clouds", "Uses Minecraft's physical world cloud plane: you can fly into and through it. Default: ON", c.fantasyClouds, v -> c.fantasyClouds = v),
 				bool("Frosted text displays", "Keep water/glass/entities visible through custom text_display backgrounds. Default: ON", c.depthSafeTextDisplays, v -> c.depthSafeTextDisplays = v),
 				bool("Day/night tint", "Warm direct daylight, cool night ambient and smooth dawn/dusk transitions. Default: ON", c.dayNightTint, v -> c.dayNightTint = v),
 				bool("Held light", "Held emissive blocks light nearby terrain. Default: ON", c.dynamicHeldLight, v -> c.dynamicHeldLight = v),
@@ -219,11 +219,7 @@ public static void addCinematicOptions(OptionListWidget body) {
 
 	body.addHeader(Text.literal("§l§fCinematic clouds"));
 	body.addAll(
-			slider("Cloud coverage", "Kolik oblohy je typicky zakryto mraky. Default: 48", 0, 100, c.cloudCoverage, v -> c.cloudCoverage = v),
-			slider("Cloud density", "Optická hustota a plnost mraků. Default: 62", 20, 100, c.cloudDensity, v -> c.cloudDensity = v),
-			slider("Silver lining", "Záře hran mraků při slunci/měsíci za nimi. Default: 72", 0, 100, c.cloudSilverLining, v -> c.cloudSilverLining = v),
-			slider("Cloud shadow", "Jak výrazně mraky zastiňují krajinu a vlastní objem. Default: 74", 0, 100, c.cloudShadowStrength, v -> c.cloudShadowStrength = v),
-			slider("Cloud speed", "Rychlost world-space driftu mraků. Default: 38", 0, 100, c.cloudSpeed, v -> c.cloudSpeed = v));
+			slider("Cloud height", "Výška skutečné vanilla cloudové vrstvy ve world blocích. Default: 192", 64, 320, c.cloudHeight, v -> c.cloudHeight = v));
 
 	body.addHeader(Text.literal("§l§3Cinematic water"));
 	body.addAll(
