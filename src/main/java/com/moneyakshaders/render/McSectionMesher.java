@@ -110,6 +110,8 @@ public final class McSectionMesher {
     public static final int MAT_EMISSIVE_SOLID = 12;
     /** The lower boundary of a real air pocket below a non-waterloggable block entity. */
     public static final int MAT_WATER_POCKET = 13;
+	/** Thin glass pane geometry; receives a translucent depth bias against arbitrary model neighbours. */
+	public static final int MAT_GLASS_PANE = 14;
 
     public static boolean isWaterMaterial(int material) {
         return material == MAT_WATER || material == MAT_WATER_ICE || material == MAT_WATER_POCKET;
@@ -155,6 +157,10 @@ public final class McSectionMesher {
 
     private static int materialOf(BlockState state, boolean fullCubeGeometry) {
         net.minecraft.block.Block b = state.getBlock();
+		// A pane can meet an arbitrarily shaped/tall neighbour (walls and resource-pack
+		// models included). Keep it distinguishable in the fragment shader so its thin
+		// caps never fight the neighbour's real surface.
+		if (b instanceof net.minecraft.block.PaneBlock) return MAT_GLASS_PANE;
         if (b instanceof net.minecraft.block.LeafLitterBlock) return MAT_NO_SHADOW; // flat ground litter — no shadow
         // LIGHT-EMITTING non-full-cube blocks (torch, lantern, campfire, end rod…) cast NO shadow: a
         // glowing model throwing a long dark streak from another light reads absurd (user report). Full
@@ -523,9 +529,16 @@ public final class McSectionMesher {
         }
 		for (int partIndex = 0; partIndex < parts.length; partIndex++) {
 			BlockModelPart part = parts[partIndex];
+			boolean pane = state.getBlock() instanceof net.minecraft.block.PaneBlock;
             for (Direction dir : DIRECTIONS) {
                 scratch.set(pos.getX() + dir.getOffsetX(), pos.getY() + dir.getOffsetY(), pos.getZ() + dir.getOffsetZ());
                 BlockState neighbor = world.getBlockState(scratch);
+				// Pane models contain a paper-thin top and bottom cap. Unlike a full glass
+				// cube, the vanilla culling shape does not hide that cap against a full
+				// block above/below, leaving two coplanar translucent/opaque fragments that
+				// flicker at the contact edge. The cap is internal in this one case only.
+				if (pane && (dir == Direction.UP || dir == Direction.DOWN)
+						&& neighbor.isOpaqueFullCube()) continue;
                 // Vanilla occlusion test: correctly handles opaque neighbours, partial shapes
                 // (slabs, stairs) and same-block invisibility (glass<->glass). The old crude
                 // isOpaqueFullCube + same-block checks over-culled faces between dissimilar
@@ -620,6 +633,18 @@ public final class McSectionMesher {
 		// profile and forced visible GC pauses. RandomAccess/indexing keeps this hot path allocation-free.
 		for (int quadIndex = 0, quadCount = quads.size(); quadIndex < quadCount; quadIndex++) {
 			BakedQuad quad = quads.get(quadIndex);
+			Direction face = quad.face();
+			// Pane caps are commonly emitted in the model's null-face list, so the
+			// side-level culling in meshBlock cannot see them. Apply the same rule to
+			// every concrete baked quad: an UP/DOWN cap touching a full opaque cube is
+			// internal and otherwise exactly coplanar with that cube's face.
+			if (block instanceof net.minecraft.block.PaneBlock
+					&& (face == Direction.UP || face == Direction.DOWN)) {
+				BlockState capNeighbor = world.getBlockState(scratch.set(
+						pos.getX() + face.getOffsetX(), pos.getY() + face.getOffsetY(),
+						pos.getZ() + face.getOffsetZ()));
+				if (capNeighbor.isOpaqueFullCube()) continue;
+			}
             int r = 255, g = 255, b = 255;
             if (quad.hasTint()) {
                 int c = blockColors.getColor(state, tintView, pos, quad.tintIndex());
@@ -627,7 +652,6 @@ public final class McSectionMesher {
                 g = c >> 8 & 0xFF;
                 b = c & 0xFF;
             }
-            Direction face = quad.face();
             int nx = face == null ? 0 : face.getOffsetX();
             int ny = face == null ? 1 : face.getOffsetY();
             int nz = face == null ? 0 : face.getOffsetZ();

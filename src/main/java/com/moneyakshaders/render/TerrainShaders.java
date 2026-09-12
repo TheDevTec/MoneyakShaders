@@ -570,6 +570,14 @@ private static final String MAIN_FS = """
 				return;
 			}
 
+			// Panes are infinitesimally thin and can touch the top, bottom or side of
+			// arbitrary non-full neighbour models (walls or resource-pack geometry).
+			// Put only the pane a fraction behind an equal-depth opaque fragment. This
+			// resolves coplanar fighting without changing full glass cubes or opening a
+			// visible geometric gap at free pane edges.
+			bool pane=vMat>13.5&&vMat<14.5;
+			if(uTranslucent==1&&pane) gl_FragDepth=min(gl_FragCoord.z+0.0000015,1.0);
+
 			vec3 albedo=tex.rgb*vColor.rgb;
 			float alpha=uTranslucent==1?tex.a*vColor.a*reveal:1.0;
 			if(uTranslucent==1&&alpha<=0.003)discard;
