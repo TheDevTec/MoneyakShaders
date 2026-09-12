@@ -1,0 +1,20 @@
+{
+	"sources": [
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_0", "sprite": "moneyakshaders:ripple_0"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_1", "sprite": "moneyakshaders:ripple_1"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_2", "sprite": "moneyakshaders:ripple_2"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_3", "sprite": "moneyakshaders:ripple_3"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_4", "sprite": "moneyakshaders:ripple_4"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_5", "sprite": "moneyakshaders:ripple_5"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_6", "sprite": "moneyakshaders:ripple_6"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_7", "sprite": "moneyakshaders:ripple_7"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/ripple_8", "sprite": "moneyakshaders:ripple_8"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/mist", "sprite": "moneyakshaders:mist"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/foam_0", "sprite": "moneyakshaders:foam_0"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/foam_1", "sprite": "moneyakshaders:foam_1"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/foam_2", "sprite": "moneyakshaders:foam_2"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/foam_3", "sprite": "moneyakshaders:foam_3"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/foam_4", "sprite": "moneyakshaders:foam_4"},
+		{"type": "minecraft:single", "resource": "moneyakshaders:particle/spray", "sprite": "moneyakshaders:spray"}
+	]
+}

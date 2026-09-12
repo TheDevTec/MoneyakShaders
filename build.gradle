@@ -1,0 +1,123 @@
+// Build configuration for MoneyakShaders mod
+plugins {
+	id 'fabric-loom' version '1.17.13'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	// Loom adds Fabric and Mojang repositories automatically.
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	// Creative-tab pagination is supplied by Fabric API. Compile against it without nesting it into
+	// our jar, and keep the same API version in the development runtime for compatibility tests.
+	modCompileOnly "net.fabricmc.fabric-api:fabric-api:0.141.4+1.21.11"
+	modRuntimeOnly "net.fabricmc.fabric-api:fabric-api:0.141.4+1.21.11"
+}
+
+loom {
+	accessWidenerPath = file('src/main/resources/moneyakshaders.accesswidener')
+	runs {
+		client {
+			// A stable offline dev identity keeps the same server UUID, position and inventory across
+			// client restarts; Loom's generated PlayerNNN name otherwise teleports every live test.
+			def testServer = (project.findProperty('testServer') ?: 'localhost:25565').toString()
+			programArgs '--username', 'Player400', '--quickPlayMultiplayer', testServer
+		}
+	}
+}
+
+processResources {
+	inputs.property 'version', project.version
+	
+	filesMatching('fabric.mod.json') {
+		expand 'version': project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+// The current regression suite is an executable Java test, without a test framework.
+// Run it explicitly so assertions are checked by both `test` and `build`.
+def adaptiveShadowTest = tasks.register('adaptiveShadowTest', JavaExec) {
+	group = 'verification'
+	description = 'Checks adaptive shadow timing, recovery and resolution limits.'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.AdaptiveShadowQualityTest'
+	javaLauncher = javaToolchains.launcherFor {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+tasks.named('test', Test) {
+	dependsOn 'renderSchedulingTest'
+	dependsOn 'sceneResidencyTest'
+	dependsOn 'sceneVisibilityTest'
+	dependsOn adaptiveShadowTest
+	dependsOn 'snapshotBurstBudgetTest'
+	// No JUnit tests yet; the executable regression suite above must still succeed.
+	failOnNoDiscoveredTests = false
+}
+
+tasks.register('renderSchedulingTest', JavaExec) {
+	group = 'verification'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.RenderSchedulingTest'
+	javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+tasks.register('sceneResidencyTest', JavaExec) {
+	group = 'verification'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.SceneResidencySchedulerTest'
+	javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+tasks.register('sceneVisibilityTest', JavaExec) {
+	group = 'verification'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.SceneVisibilityGraphTest'
+	javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+tasks.register('snapshotBurstBudgetTest', JavaExec) {
+	group = 'verification'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.SnapshotBurstBudgetTest'
+	javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+tasks.register('pointShadowGpuTest', JavaExec) {
+	group = 'verification'
+	description = 'Tests depth atlas resizing on the local GPU in a hidden context.'
+	dependsOn tasks.named('testClasses')
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = 'com.moneyakshaders.render.PointShadowAtlasCopyTest'
+	javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+jar {
+	from('LICENSE')
+}

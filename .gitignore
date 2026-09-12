@@ -1,0 +1,16 @@
+# Gradle
+.gradle/
+build/
+.tools/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+bin/
+.classpath
+.project
+.settings/
+
+# Fabric
+run/

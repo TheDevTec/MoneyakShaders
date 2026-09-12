@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.moneyakshaders.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"minVersion": "0.8",
+	"mixins": [
+		"ParticleTypesRegisterMixin",
+		"UtilMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

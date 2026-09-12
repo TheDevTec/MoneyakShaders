@@ -1,0 +1,4 @@
+accessWidener v2 named
+accessible class net/minecraft/client/particle/ParticleSpriteManager$SpriteAwareFactory
+accessible method net/minecraft/client/particle/ParticleSpriteManager register (Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleSpriteManager$SpriteAwareFactory;)V
+accessible method net/minecraft/client/particle/ParticleSpriteManager register (Lnet/minecraft/particle/ParticleType;Lnet/minecraft/client/particle/ParticleFactory;)V

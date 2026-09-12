@@ -1,0 +1,31 @@
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171024:		p	3			renderBlockOutline
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171025:		p	4			renderStates
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171026:		p	1			immediate
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171027:		p	2			matrices
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171028:	m	(Lhts$a;)V	a	method_38550	addBuiltChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171029:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171030:	m	(Lhts$a;Lhtt;Lftm;ZZ)V	a	method_64060	scheduleChunkTranslucencySort
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171031:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171032:		p	2			relativePos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171033:		p	3			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171034:		p	4			needsUpdate
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171035:		p	5			ignoreCameraAlignment
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171036:	m	(Lhtx;)Lhtx;	a	method_52816	offsetFrustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171037:		p	0			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171038:	m	(Lis;)Z	a	method_40050	isRenderingReady
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171039:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171040:	m	(Lis;Leoh;Leoh;)V	a	method_21596	scheduleBlockRerenderIfNeeded
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171041:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171042:		p	2			old
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171043:		p	3			updated
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171044:	m	(Lis;Z)V	a	method_16037	scheduleSectionRender
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171045:		p	2			important
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171046:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171047:	m	(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lftm;)Lhtx;	a	method_32133	setupFrustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171048:		p	1			posMatrix
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171049:		p	3			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171050:		p	2			projMatrix
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171051:	m	(Lorg/joml/Matrix4fc;DDD)Lhtj;	a	method_72157	renderBlockLayers
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171052:		p	6			cameraZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171053:		p	4			cameraY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171054:		p	2			cameraX

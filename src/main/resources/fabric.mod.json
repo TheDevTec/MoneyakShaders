@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "moneyakshaders",
+	"version": "${version}",
+	"name": "Moneyak Shaders",
+	"description": "Spreads chunk meshing, world generation and lighting work across all CPU cores instead of letting vanilla bottleneck on a handful of threads.",
+	"authors": [
+		"strai"
+	],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.moneyakshaders.MoneyakShaders"
+		]
+	},
+	"accessWidener": "moneyakshaders.accesswidener",
+	"mixins": [
+		"moneyakshaders.mixins.json",
+		{
+			"config": "moneyakshaders.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.0",
+		"fabric-api": "*",
+		"minecraft": "~1.21.11"
+	}
+}

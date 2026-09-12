@@ -1,0 +1,52 @@
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:24749:	m	(Lagk;)V	a	method_20320	onChunkRenderDistanceCenter
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:26702:c	agk	net/minecraft/class_4282	net/minecraft/network/packet/s2c/play/ChunkRenderDistanceCenterS2CPacket
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:55223:c	brs	net/minecraft/class_4300	net/minecraft/datafixer/fix/VillagerExperienceRebuildFix
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:55426:c	bse	net/minecraft/class_4301	net/minecraft/datafixer/fix/ZombieVillagerXpRebuildFix
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:139124:	m	()V	c	method_60802	ensureBuilding
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:144834:	f	Lgfn;	bn	field_34787	chunkBuilderMode
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:145392:	m	()Lgfn;	s	method_41798	getChunkBuilderMode
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:145525:c	gfq	net/minecraft/class_6597	net/minecraft/client/render/ChunkBuilderMode
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:152342:c	gkz	net/minecraft/class_11607	net/minecraft/client/gui/hud/debug/ChunkRenderStatsDebugHudEntry
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:166433:	m	(IIIIII)V	b	method_62146	scheduleChunkRenders
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:170154:	f	Z	o	field_53052	rebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:170846:	f	Lhts;	K	field_45614	chunkBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:170877:	f	Lhpf;	t	field_45615	chunkRenderingDataPreparer
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:170893:	m	(III)V	a	method_18145	scheduleChunkRenders3x3x3
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:170904:	m	(IIIZ)V	a	method_3295	scheduleChunkRender
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171058:	m	(III)V	b	method_8571	scheduleChunkRender
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171062:	m	(IIIIII)V	b	method_62219	scheduleChunkRenders
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171084:	m	()Lhts;	f	method_34810	getChunkBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:171102:	m	()Lhpf;	x	method_62221	getChunkRenderingDataPreparer
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172057:c	hpf	net/minecraft/class_8679	net/minecraft/client/render/ChunkRenderingDataPreparer
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172132:c	hpf$a	net/minecraft/class_8679$class_8680	net/minecraft/client/render/ChunkRenderingDataPreparer$Events
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172140:c	hpf$b	net/minecraft/class_8679$class_8681	net/minecraft/client/render/ChunkRenderingDataPreparer$PreparerState
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172150:c	hpf$c	net/minecraft/class_8679$class_6600	net/minecraft/client/render/ChunkRenderingDataPreparer$RenderableChunks
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172156:c	hpf$d	net/minecraft/class_8679$class_762	net/minecraft/client/render/ChunkRenderingDataPreparer$ChunkInfo
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172177:c	hpf$e	net/minecraft/class_8679$class_5972	net/minecraft/client/render/ChunkRenderingDataPreparer$ChunkInfoList
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172959:	m	(IIIZ)V	a	method_16040	scheduleRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172967:		p	1			chunkBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:172987:		p	1			chunkBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175283:c	htk	net/minecraft/class_10160	net/minecraft/client/render/chunk/ChunkRenderTaskScheduler
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175295:c	htl	net/minecraft/class_11516	net/minecraft/client/render/chunk/ChunkRenderData
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175322:c	htl$1	net/minecraft/class_11516$1	net/minecraft/client/render/chunk/ChunkRenderData$1
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175323:c	htl$2	net/minecraft/class_11516$2	net/minecraft/client/render/chunk/ChunkRenderData$2
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175324:c	htm	net/minecraft/class_6850	net/minecraft/client/render/chunk/ChunkRendererRegionBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175336:c	htn	net/minecraft/class_853	net/minecraft/client/render/chunk/ChunkRendererRegion
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175420:c	htr	net/minecraft/class_11517	net/minecraft/client/render/chunk/AbstractChunkRenderData
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175433:c	hts	net/minecraft/class_846	net/minecraft/client/render/chunk/ChunkBuilder
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175458:	m	(Lhts$a;Lhtm;)V	a	method_3627	rebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175480:c	hts$a	net/minecraft/class_846$class_851	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175485:	f	Lhts$a$b;	e	field_20834	rebuildTask
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175488:	f	Z	h	field_4464	needsRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175491:	f	Z	k	field_4463	needsImportantRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175505:	m	(Lhtm;)Lhts$a$a;	a	method_3674	createRebuildTask
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175521:	m	(Lhtm;)V	b	method_22777	scheduleRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175524:	m	(Z)V	b	method_3654	scheduleRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175529:	m	(Lhtm;)V	c	method_22781	rebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175537:	m	()V	h	method_3662	cancelRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175538:	m	()Z	i	method_3672	needsRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175539:	m	()Z	j	method_3661	needsImportantRebuild
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175546:c	hts$a$a	net/minecraft/class_846$class_851$class_4577	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$Task
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175559:c	hts$a$b	net/minecraft/class_846$class_851$class_4578	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$RebuildTask
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175566:c	hts$a$c	net/minecraft/class_846$class_851$class_4579	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$SortTask
+C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1.21.11+build.6-v2\mappings.tiny:175572:c	hts$b	net/minecraft/class_846$class_4690	net/minecraft/client/render/chunk/ChunkBuilder$Result

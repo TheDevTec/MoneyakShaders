@@ -1,0 +1,1273 @@
+
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171028:	m	(Lhts$a;)V	a	method_38550	addBuiltChu
+nk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171029:		p	1			chunk
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171030:	m	(Lhts$a;Lhtt;Lftm;ZZ)V	a	method_64060
+	scheduleChunkTranslucencySort
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171031:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171032:		p	2			relativePos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171033:		p	3			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171034:		p	4			needsUpdate
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171035:		p	5			ignoreCameraAlignment
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171036:	m	(Lhtx;)Lhtx;	a	method_52816	offsetFru
+stum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171037:		p	0			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171038:	m	(Lis;)Z	a	method_40050	isRenderingRea
+dy
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171039:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171040:	m	(Lis;Leoh;Leoh;)V	a	method_21596	sche
+duleBlockRerenderIfNeeded
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171041:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171042:		p	2			old
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171043:		p	3			updated
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171044:	m	(Lis;Z)V	a	method_16037	scheduleSecti
+onRender
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171045:		p	2			important
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171046:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171047:	m	(Lorg/joml/Matrix4f;Lorg/joml/Matrix4
+f;Lftm;)Lhtx;	a	method_32133	setupFrustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171048:		p	1			posMatrix
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171049:		p	3			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171050:		p	2			projMatrix
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171051:	m	(Lorg/joml/Matrix4fc;DDD)Lhtj;	a	meth
+od_72157	renderBlockLayers
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171052:		p	6			cameraZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171053:		p	4			cameraY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171054:		p	2			cameraX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171055:		p	1			matrix
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171056:	m	(Lorg/joml/Vector4f;)V	a	method_62218
+	method_62218
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171057:	m	()V	b	method_3254	drawEntityOutlinesF
+ramebuffer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171058:	m	(III)V	b	method_8571	scheduleChunkRen
+der
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171059:		p	3			chunkZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171060:		p	1			chunkX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171061:		p	2			chunkY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171062:	m	(IIIIII)V	b	method_62219	scheduleChun
+kRenders
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171063:		p	4			maxX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171064:		p	3			minZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171065:		p	6			maxZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171066:		p	5			maxY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171067:		p	2			minY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171068:		p	1			minX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171069:	m	(J)Ljava/util/SortedSet;	b	method_229
+88	method_22988
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171070:	m	(Lfwv;Lcom/mojang/blaze3d/buffers/Gpu
+BufferSlice;)V	b	method_62203	renderWeather
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171295:	m	(Lhts$a;)Z	a	method_62912	add
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171296:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171297:	m	(Ljw;III)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171298:		p	2			viewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171299:		p	3			sizeY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171300:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171301:		p	4			bottomY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171302:c	hoo$a	net/minecraft/class_10143$class_
+10144	net/minecraft/client/render/chunk/Octree$AxisOrder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171303:	f	Lhoo$a;	a	field_53906	XYZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171304:	f	Lhoo$a;	b	field_53907	XZY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171305:	f	Lhoo$a;	c	field_53908	YXZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171306:	f	Lhoo$a;	d	field_53909	YZX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171307:	f	Lhoo$a;	e	field_53910	ZXY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171308:	f	Lhoo$a;	f	field_53911	ZYX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171309:	f	I	g	field_53912	x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171310:	f	I	h	field_53913	y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171311:	f	I	i	field_53914	z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171312:	f	[Lhoo$a;	j	field_53915	field_53915
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171313:	m	()[Lhoo$a;	a	method_62913	method_6291
+3
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171314:	m	(III)Lhoo$a;	a	method_62914	fromPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171315:		p	0			x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171316:		p	1			y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171317:		p	2			z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171318:	m	(Ljava/lang/String;IIII)V	<init>	<ini
+t>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171319:		p	5			z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171320:		p	4			y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171321:		p	3			x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171322:c	hoo$b	net/minecraft/class_10143$class_
+10145	net/minecraft/client/render/chunk/Octree$Branch
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171323:	f	Lhoo;	a	field_53916	field_53916
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171324:	f	[Lhoo$d;	b	field_53917	children
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171325:	f	Lffg;	c	field_53918	box
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171326:	f	I	d	field_53919	centerX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171327:	f	I	e	field_53920	centerY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171328:	f	I	f	field_53921	centerZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171329:	f	Lhoo$a;	g	field_53922	axisOrder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171330:	f	Z	h	field_53923	easternSide
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171331:	f	Z	i	field_53924	topSide
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171332:	f	Z	j	field_53925	southernSide
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171333:	m	(Lhoo$a;ZZZ)I	a	method_62916	getIndex
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171334:		p	2			sameRelativeSideY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171335:			c	whether the side of the chunk relat
+ive to this branch's center\nequals the side of the branch relative to the play
+er, on the Y axis
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171341:	m	(Lhts$a;)Z	a	method_62918	add
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171342:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171343:	m	(ZZZ)Lffg;	a	method_62919	getChildBox
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171344:		p	1			western
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171345:		p	3			northern
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171346:		p	2			bottom
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171347:	m	()Z	c	method_62921	areChildrenLeaves
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171348:	m	(Lhoo;Lffg;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171349:		p	2			box
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171350:c	hoo$c	net/minecraft/class_10143$class_
+10146	net/minecraft/client/render/chunk/Octree$Leaf
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171351:	f	Lhoo;	a	field_54165	field_54165
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171352:	f	Lhts$a;	b	field_54166	chunk
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171353:	m	(Lhoo;Lhts$a;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171354:		p	2			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171355:c	hoo$d	net/minecraft/class_10143$class_
+10147	net/minecraft/client/render/chunk/Octree$Node
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171356:	m	()Lhts$a;	a	method_62915	getBuiltChun
+k
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171357:	m	(Lhoo$e;ZLhtx;IIZ)V	a	method_62917	vi
+sit
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171358:		p	1			visitor
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171359:		p	2			skipVisibilityCheck
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171360:		p	5			margin
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171361:		p	6			nearCenter
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171362:		p	3			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171363:		p	4			depth
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171364:	m	()Lfth;	b	method_62920	getBoundingBox
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171365:c	hoo$e	net/minecraft/class_10143$class_
+10148	net/minecraft/client/render/chunk/Octree$Visitor
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171366:	m	(Lhoo$d;ZIZ)V	visit	visit	visit
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171367:		p	1			node
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171368:		p	2			skipVisibilityCheck
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171369:		p	3			depth
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171370:		p	4			nearCenter
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171371:			c	whether the node is near octree's {
+@linkplain Octree#centerPos center}, that is, camera pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171372:c	hop	net/minecraft/class_11785	net/mine
+craft/client/render/command/RenderCommandQueue
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171373:	m	(Lfzm;FFLbfr;ZLgio$a;IIII)V	a	method_
+73478	submitText
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171374:		p	7			light
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171375:		p	8			color
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171376:		p	5			dropShadow
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171377:		p	6			layerType
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171378:		p	9			backgroundColor
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171379:		p	10			outlineColor
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171380:		p	3			y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171381:		p	4			text
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171382:		p	1			matrices
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171383:		p	2			x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171384:	m	(Lfzm;FLjava/util/List;)V	a	method_73
+479	submitShadowPieces
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171385:		p	3			shadowPieces
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171386:		p	2			shadowRadius
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171387:		p	1			matrices
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171388:	m	(Lfzm;Ldlr;III[ILjava/util/List;Lijs;
+Lihm$a;)V	a	method_73480	submitItem
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171389:		p	1			matrices
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171390:		p	8			renderLayer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171391:		p	9			glintType
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171392:		p	6			tintLayers
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171393:		p	7			quads
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171394:		p	4			overlay
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171395:		p	5			outlineColors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:171396:		p	2			displayContext
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172074:	m	(JLhts$a;Liz;)Lhts$a;	a	method_52831	
+getRenderedChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172075:		p	3			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172076:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172077:		p	4			direction
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172078:	m	(Ldvu;)V	a	method_52819	addNeighbors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172079:		p	1			chunkPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172080:	m	(Lger;Lftm;ZLit/unimi/dsi/fastutil/lo
+ngs/LongOpenHashSet;)V	a	method_52820	method_52820
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172081:	m	(Lger;Ljava/util/Queue;)V	a	method_52
+821	scheduleLater
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172082:		p	1			camera
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172083:	m	(Lhpf$a;Ldvu;)V	a	method_52822	addNei
+ghbors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172084:		p	1			events
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172085:		p	2			chunkPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172086:	m	(Lhpf$b;)V	a	method_52823	scheduleNew
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172087:		p	1			preparerState
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172088:	m	(Lhpf$b;Lhpf$d;)V	a	method_52824	meth
+od_52824
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172089:		p	1			info
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172090:	m	(Lhpf$c;Lftm;Ljava/util/Queue;ZLjava/
+util/function/Consumer;Lit/unimi/dsi/fastutil/longs/LongOpenHashSet;)V	a	method
+_52825	update
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172091:		p	1			renderableChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172092:		p	2			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172093:		p	4			cullChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172094:	m	(Lhpr;)V	a	method_52826	setStorage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172095:		p	1			storage
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172096:	m	(Lhts$a;)V	a	method_52827	schedulePro
+pagationFrom
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172097:		p	1			builtChunk
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172098:	m	(Lhtx;Lhts$a;)V	a	method_52829	method
+_52829
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172099:	m	(Lhtx;Ljava/util/List;Ljava/util/List
+;)V	a	method_52828	collectChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172100:		p	1			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172101:		p	3			nearbyChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172102:		p	2			builtChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172103:	m	(Lis;Lhpf$d;)D	a	method_52830	method_
+52830
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172104:		p	1			chunkInfo
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172105:	m	(Ljava/util/List;Ljava/util/List;Lhoo
+$d;ZIZ)V	a	method_62924	method_62924
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172106:		p	5			nearCenter
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172107:		p	4			depth
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172108:		p	3			skipVisibilityCheck
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172109:		p	2			node
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172110:	m	(ZLger;Lftm;Lit/unimi/dsi/fastutil/lo
+ngs/LongOpenHashSet;)V	a	method_52833	updateTerrain
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172111:		p	4			activeSections
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172112:		p	1			cullChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172113:		p	2			camera
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172114:		p	3			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172115:	m	(ZLger;Lhtx;Ljava/util/List;Lit/unimi
+/dsi/fastutil/longs/LongOpenHashSet;)V	a	method_52834	updateSectionOcclusionGra
+ph
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172116:		p	5			activeSections
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172117:		p	2			camera
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172118:		p	1			cullChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172119:		p	4			builtChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172120:		p	3			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172121:	m	(ZLhtx;Ljava/util/List;Lftm;Lit/unimi
+/dsi/fastutil/longs/LongOpenHashSet;)V	a	method_52835	updateNow
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172122:		p	1			cullChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172123:		p	2			frustum
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172124:		p	3			builtChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172125:		p	4			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172126:		p	5			activeSections
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172127:	m	()Z	b	method_52836	updateFrustum
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172128:	m	(Lhts$a;)Lhpf$d;	b	method_52837	getIn
+fo
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172129:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172130:	m	()Lhoo;	c	method_62925	getOctree
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172131:	m	(Lhts$a;)V	c	method_52838	method_5283
+8
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172132:c	hpf$a	net/minecraft/class_8679$class_8
+680	net/minecraft/client/render/ChunkRenderingDataPreparer$Events
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172133:	f	Lit/unimi/dsi/fastutil/longs/LongSet;
+	a	comp_1618	chunksWhichReceivedNeighbors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172134:	f	Ljava/util/concurrent/BlockingQueue;	
+b	comp_1619	sectionsToPropagateFrom
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172135:	m	()Lit/unimi/dsi/fastutil/longs/LongSe
+t;	a	comp_1618	chunksWhichReceivedNeighbors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172136:	m	()Ljava/util/concurrent/BlockingQueue
+;	b	comp_1619	sectionsToPropagateFrom
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172137:	m	(Lit/unimi/dsi/fastutil/longs/LongSet
+;Ljava/util/concurrent/BlockingQueue;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172138:		p	1			chunksWhichReceivedNeighbors
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172139:		p	2			sectionsToPropagateFrom
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172140:c	hpf$b	net/minecraft/class_8679$class_8
+681	net/minecraft/client/render/ChunkRenderingDataPreparer$PreparerState
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172141:	f	Lhpf$c;	a	comp_1620	storage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172142:	f	Lhpf$a;	b	comp_1621	events
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172143:	m	()Lhpf$c;	a	comp_1620	storage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172144:	m	()Lhpf$a;	b	comp_1621	events
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172145:	m	(Lhpr;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172146:		p	1			storage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172147:	m	(Lhpf$c;Lhpf$a;)V	<init>	<init>	<init
+>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172148:		p	1			storage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172149:		p	2			events
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172150:c	hpf$c	net/minecraft/class_8679$class_6
+600	net/minecraft/client/render/ChunkRenderingDataPreparer$RenderableChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172151:	f	Lhpf$e;	a	field_45627	infoList
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172152:	f	Lhoo;	b	field_53929	octree
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172153:	f	Lit/unimi/dsi/fastutil/longs/Long2Obj
+ectMap;	c	field_45628	queue
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172154:	m	(Lhpr;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172155:		p	1			storage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172156:c	hpf$d	net/minecraft/class_8679$class_7
+62	net/minecraft/client/render/ChunkRenderingDataPreparer$ChunkInfo
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172157:	f	Lhts$a;	a	field_4124	chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172158:	f	I	b	field_4122	propagationLevel
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172159:	f	B	c	field_4125	direction
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172160:	f	B	d	field_4126	cullingState
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172161:	m	()Z	a	method_34813	hasAnyDirection
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172162:	m	(BLiz;)V	a	method_3299	updateCullingS
+tate
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172163:		p	2			from
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172164:		p	1			parentCullingState
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172165:	m	(I)Z	a	method_34814	hasDirection
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172166:		p	1			ordinal
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172167:	m	(Liz;)Z	a	method_3298	canCull
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172168:		p	1			from
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172169:	m	(Liz;)V	b	method_34816	addDirection
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172170:		p	1			direction
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172171:	m	(Lhts$a;Liz;I)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172172:		p	3			propagationLevel
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172173:		p	2			direction
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172174:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172175:	m	(Ljava/lang/Object;)Z	equals	equals	e
+quals
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172176:		p	1			o
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172177:c	hpf$e	net/minecraft/class_8679$class_5
+972	net/minecraft/client/render/ChunkRenderingDataPreparer$ChunkInfoList
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172178:	f	[Lhpf$d;	a	field_29620	current
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172179:	m	(Lhts$a;)Lhpf$d;	a	method_34820	getIn
+fo
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172180:		p	1			chunk
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172181:	m	(Lhts$a;Lhpf$d;)V	a	method_34821	setI
+nfo
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172182:		p	2			info
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172183:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172184:	m	(I)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172185:		p	1			size
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172186:c	hpg	net/minecraft/class_10149	net/mine
+craft/client/gl/Defines
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172187:	f	Lhpg;	a	field_53930	EMPTY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172188:	f	Lcom/mojang/serialization/Codec;	b	fi
+eld_53931	CODEC
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172189:	f	Ljava/util/Map;	c	comp_3103	values
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172190:	f	Ljava/util/Set;	d	comp_3104	flags
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172191:	m	()Lhpg$a;	a	method_62926	builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172192:	m	(Lcom/mojang/serialization/codecs/Rec
+ordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;	a	method_62927	meth
+od_62927
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172193:		p	0			instance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172194:	m	(Lhpg;)Lhpg;	a	method_62928	withMerge
+d
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172195:		p	1			other
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172196:	m	()Ljava/lang/String;	b	method_62929	t
+oSource
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172197:	m	()Z	c	method_62930	isEmpty
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172198:	m	()Ljava/util/Map;	d	comp_3103	values
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172199:	m	()Ljava/util/Set;	e	comp_3104	flags
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172200:	m	(Ljava/util/Map;Ljava/util/Set;)V	<in
+it>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172201:		p	1			values
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172202:		p	2			flags
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172203:c	hpg$a	net/minecraft/class_10149$class_
+10150	net/minecraft/client/gl/Defines$Builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172204:	f	Lcom/google/common/collect/ImmutableM
+ap$Builder;	a	field_53932	values
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172205:	f	Lcom/google/common/collect/ImmutableS
+et$Builder;	b	field_53933	flags
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172206:	m	()Lhpg;	a	method_62931	build
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172207:	m	(Ljava/lang/String;)Lhpg$a;	a	method_
+62932	flag
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172208:		p	1			flag
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172209:	m	(Ljava/lang/String;F)Lhpg$a;	a	method
+_62933	define
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172210:		p	2			value
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172211:		p	1			key
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172212:	m	(Ljava/lang/String;I)Lhpg$a;	a	method
+_67908	define
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172213:		p	1			name
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172214:		p	2			value
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172215:	m	(Ljava/lang/String;Ljava/lang/String;
+)Lhpg$a;	a	method_62934	define
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172216:		p	1			key
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172217:		p	2			value
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172218:	m	(Ljava/lang/String;)Ljava/lang/String
+;	b	method_62935	escapeLinebreak
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172219:		p	0			string
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172220:c	hph	net/minecraft/class_10151	net/mine
+craft/client/gl/ShaderLoader
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172221:	f	I	a	field_53936	field_53936
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172949:	f	[Lhts$a;	f	field_4150	chunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172950:	f	I	g	field_45629	viewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172951:	f	Ljw;	h	field_53952	sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172952:	m	()V	a	method_3327	clear
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172953:	m	(I)V	a	method_3325	setViewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172954:		p	1			viewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172955:	m	(III)I	a	method_3326	getChunkIndex
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172956:		p	3			z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172957:		p	2			y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172958:		p	1			x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172959:	m	(IIIZ)V	a	method_16040	scheduleRebuil
+d
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172960:		p	4			important
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172961:		p	3			z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172962:		p	2			y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172963:		p	1			x
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172964:	m	(J)Lhts$a;	a	method_62963	getRendered
+Chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172965:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172966:	m	(Lhts;)V	a	method_3324	createChunks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172967:		p	1			chunkBuilder
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172968:	m	(Lis;)Lhts$a;	a	method_3323	getRender
+edChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172969:		p	1			blockPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172970:	m	(Ljw;)V	a	method_3330	updateCameraPos
+ition
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172971:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172972:	m	()I	b	method_52839	getViewDistance
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172973:	m	(III)Lhts$a;	b	method_62964	getRender
+edChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172974:		p	3			sectionZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172975:		p	2			sectionY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172976:		p	1			sectionX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172977:	m	()Ldwq;	c	method_52840	getWorld
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172978:	m	(III)Z	c	method_62965	isSectionWithin
+ViewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172979:		p	3			sectionZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172980:		p	2			sectionY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172981:		p	1			sectionX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172982:	m	()Ljw;	d	method_62966	getSectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172983:	m	(Lhts;Ldwo;ILhoh;)V	<init>	<init>	<in
+it>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172984:		p	4			worldRenderer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172985:		p	2			world
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172986:		p	3			viewDistance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172987:		p	1			chunkBuilder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172988:c	hps	net/minecraft/class_3682	net/minec
+raft/client/util/WindowProvider
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172989:	f	Lgfj;	a	field_16256	client
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172990:	f	Lfyi;	b	field_16255	monitorTracker
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172991:	m	(Lfxz;Ljava/lang/String;Ljava/lang/St
+ring;)Lfyk;	a	method_16038	createWindow
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172992:		p	1			settings
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172993:		p	2			videoMode
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172994:		p	3			title
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172995:	m	(Lgfj;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172996:		p	1			client
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172997:c	hpt	net/minecraft/class_9976	net/minec
+raft/client/render/WeatherRendering
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172998:	f	F	a	field_63581	field_63581
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:172999:	f	I	b	field_53148	field_53148
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173000:	f	Lamo;	c	field_53150	RAIN_TEXTURE
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173001:	f	Lamo;	d	field_53151	SNOW_TEXTURE
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173002:	f	I	e	field_53152	field_53152
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173003:	f	I	f	field_53153	field_53153
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173004:	f	I	g	field_53154	soundChance
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173005:	f	[F	h	field_53155	NORMAL_LINE_DX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173006:		c	Given {@code -16 <= z < 16} and {@co
+de -16 <= x < 16}, let {@code i = 32 * (z + 16) + (x + 16)}.\nThen {@code NORMA
+L_LINE_DX[i]} and {@code NORMAL_LINE_DZ[i]} describe the\nunit vector perpendic
+ular to {@code (x, z)}.\n\nThese lookup tables are used for rendering rain and 
+snow.
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173007:	f	[F	i	field_53156	NORMAL_LINE_DZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173008:	m	(Lbgr;IIIIIIF)Lhpt$a;	a	method_62314	
+createRainPiece
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173009:		p	1			random
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173010:		p	2			ticks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173011:		p	3			x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173012:		p	4			yMin
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:173013:		p	5			yMax
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175288:	m	(I)Lhts$a$a;	a	method_62968	remove
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175289:		p	1			index
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175290:	m	(Lftm;)Lhts$a$a;	a	method_62969	deque
+ueNearest
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175291:		p	1			pos
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175292:	m	(Lhts$a$a;)V	a	method_62970	enqueue
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175293:		p	1			task
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175294:	m	()V	b	method_62971	cancelAll
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175295:c	htl	net/minecraft/class_11516	net/mine
+craft/client/render/chunk/ChunkRenderData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175296:	f	Lhtr;	a	field_60935	HIDDEN
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175297:	f	Lhtr;	b	field_60936	READY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175298:	f	Ljava/util/List;	c	field_60937	blockE
+ntities
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175299:	f	Lhtv;	d	field_60938	chunkOcclusionDat
+a
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175300:	f	Lfzl$b;	e	field_60939	translucencySor
+tingData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175301:	f	Lhtt;	f	field_60940	pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175302:	f	Ljava/util/Map;	g	field_60941	buffers
+ByLayer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175303:	m	(Lhth;J)Ljava/lang/String;	a	method_7
+2029	method_72029
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175304:	m	(Lhth;Lfzi$a;J)V	a	method_72030	uploa
+dIndexBuffer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175305:		p	1			layer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175306:		p	2			buffer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175307:		p	3			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175308:	m	(Lhth;Lfzl;J)V	a	method_72031	upload
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175309:		p	3			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175310:		p	2			builtBuffer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175311:		p	1			layer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175312:	m	(Lhtt;)V	a	method_72032	setPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175313:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175314:	m	(Lhth;J)Ljava/lang/String;	b	method_7
+2035	method_72035
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175315:	m	(Lhth;J)Ljava/lang/String;	c	method_7
+2038	method_72038
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175316:	m	()Lfzl$b;	d	method_72039	getTransluce
+ncySortingData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175317:	m	(Lhth;J)Ljava/lang/String;	d	method_7
+2040	method_72040
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175318:	m	(Lhth;J)Ljava/lang/String;	e	method_7
+2041	method_72041
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175319:	m	(Lhtt;Lhtp$a;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175320:		p	1			pos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175321:		p	2			renderData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175322:c	htl$1	net/minecraft/class_11516$1	net/
+minecraft/client/render/chunk/ChunkRenderData$1
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175323:c	htl$2	net/minecraft/class_11516$2	net/
+minecraft/client/render/chunk/ChunkRenderData$2
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175324:c	htm	net/minecraft/class_6850	net/minec
+raft/client/render/chunk/ChunkRendererRegionBuilder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175325:	f	Lit/unimi/dsi/fastutil/longs/Long2Obj
+ectMap;	a	field_60942	renderedChunksByPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175326:	m	(Ldwo;III)Lhtq;	a	method_72042	getRen
+deredChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175327:		p	3			sectionY
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175328:		p	4			sectionZ
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175329:		p	1			world
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175330:		p	2			sectionX
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175331:	m	(Ldwo;IIIJ)Lhtq;	a	method_72043	metho
+d_72043
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175332:		p	4			pos
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175452:	m	(Lhts$a$a;)V	a	method_22756	send
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175453:		p	1			task
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175454:	m	(Lhts$a$a;Lhpd;)Ljava/util/concurrent
+/CompletableFuture;	a	method_22757	method_22757
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175455:	m	(Lhts$a$a;Lhpd;Lhts$b;Ljava/lang/Thro
+wable;)V	a	method_22755	method_22755
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175456:		p	4			throwable
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175457:		p	3			result
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175458:	m	(Lhts$a;Lhtm;)V	a	method_3627	rebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175459:		p	2			builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175460:		p	1			chunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175461:	m	(Lhts$b;Lhpd;)V	a	method_23618	method
+_23618
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175462:	m	(Ljava/util/concurrent/CompletableFut
+ure;)Ljava/util/concurrent/CompletionStage;	a	method_38555	method_38555
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175463:		p	0			future
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175464:	m	()V	b	method_72045	cancelAllTasks
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175465:	m	(Lhts$a$a;)V	b	method_23086	method_23
+086
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175466:	m	()Z	c	method_3630	isEmpty
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175467:	m	()V	d	method_3619	stop
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175468:	m	()Ljava/lang/String;	e	method_3622	ge
+tDebugString
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175469:	m	()I	f	method_72046	getScheduledTaskCo
+unt
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175470:	m	()I	g	method_34846	getChunksToUpload
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175471:	m	()I	h	method_34847	getFreeBufferCount
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175472:	m	()V	i	method_22763	scheduleRunTasks
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175473:	m	(Lhif;Lhoh;Lz;Lhoz;Lhpw;Lhrh;)V	<init
+>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175474:		p	1			world
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175475:		p	2			worldRenderer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175476:		p	3			executor
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175477:		p	4			bufferBuilderStorage
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175478:		p	5			blockRenderManager
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175479:		p	6			blockEntityRenderDispatcher
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175480:c	hts$a	net/minecraft/class_846$class_85
+1	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175481:	f	I	a	field_32832	CHUNK_SIZE
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175482:	f	I	b	field_29641	index
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175483:	f	Ljava/util/concurrent/atomic/AtomicRe
+ference;	c	field_60949	currentRenderData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175484:	f	Lhts;	d	field_20833	field_20833
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175485:	f	Lhts$a$b;	e	field_20834	rebuildTask
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175486:	f	Lhts$a$c;	f	field_4461	sortTask
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175487:	f	Lfth;	g	field_4458	boundingBox
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175488:	f	Z	h	field_4464	needsRebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175489:	f	J	i	field_53958	sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175490:	f	Lis$a;	j	field_4467	origin
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175491:	f	Z	k	field_4463	needsImportantRebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175492:	f	J	l	field_64231	field_64231
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175493:	f	J	m	field_64453	field_64453
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175494:	f	Z	n	field_64454	field_64454
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175495:	m	()Z	a	method_76546	method_76546
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175496:	m	(J)F	a	method_76298	method_76298
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175497:	m	(Lhtl;Lfzi$a;Lhth;)Ljava/util/concurr
+ent/CompletableFuture;	a	method_68531	uploadIndices
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175498:		p	1			data
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175499:		p	2			buffer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175500:		p	3			layer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175501:	m	(Lhtl;Lhth;Lfzi$a;)V	a	method_72047	m
+ethod_72047
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175502:	m	(Lhtl;Lhth;Lfzl;)V	a	method_72048	met
+hod_72048
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175503:		p	2			layer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175504:		p	3			buffer
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175505:	m	(Lhtm;)Lhts$a$a;	a	method_3674	create
+RebuildTask
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175506:		p	1			builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175507:	m	(Lhtr;)V	a	method_72049	setCurrentRen
+derData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175508:		p	1			data
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175509:	m	(Lhts;)V	a	method_22773	scheduleSort
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175510:		p	1			builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175511:	m	(Liz;)J	a	method_62974	getOffsetSecti
+onPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175512:		p	1			direction
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175513:	m	(Ljava/util/Map;Lhtl;)Ljava/util/conc
+urrent/CompletableFuture;	a	method_72050	uploadLayer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175514:		p	2			renderData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175515:		p	1			buffersByLayer
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175516:	m	(Ljw;)Lfzr;	a	method_60909	getVertexS
+orter
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175517:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175518:	m	(Z)V	a	method_76547	method_76547
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175519:	m	()Z	b	method_3673	shouldBuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175520:	m	(J)V	b	method_76548	method_76548
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175521:	m	(Lhtm;)V	b	method_22777	scheduleRebui
+ld
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175522:		p	1			builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175523:	m	(Ljava/util/Map;Lhtl;)V	b	method_7205
+1	method_72051
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175524:	m	(Z)V	b	method_3654	scheduleRebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175525:		p	1			important
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175526:	m	()Lfth;	c	method_40051	getBoundingBox
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175527:	m	(J)V	c	method_62973	setSectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175528:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175529:	m	(Lhtm;)V	c	method_22781	rebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175530:		p	1			builder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175531:	m	()Lhtr;	d	method_72052	getCurrentRend
+erData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175532:	m	(J)Z	d	method_3651	isChunkNonEmpty
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175533:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175534:	m	()V	e	method_3675	clear
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175535:	m	()Lis;	f	method_3670	getOrigin
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175536:	m	()J	g	method_62975	getSectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175537:	m	()V	h	method_3662	cancelRebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175538:	m	()Z	i	method_3672	needsRebuild
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175539:	m	()Z	j	method_3661	needsImportantRebui
+ld
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175540:	m	()Z	k	method_64065	hasTranslucentLaye
+r
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175541:	m	()Z	l	method_64066	isCurrentlySorting
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175542:	m	()V	m	method_3663	cancel
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175543:	m	(Lhts;IJ)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175544:		p	3			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175545:		p	2			index
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175546:c	hts$a$a	net/minecraft/class_846$class_
+851$class_4577	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$Task
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175547:	f	Ljava/util/concurrent/atomic/AtomicBo
+olean;	a	field_20836	cancelled
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175548:	f	Ljava/util/concurrent/atomic/AtomicBo
+olean;	b	field_54169	finished
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175549:	f	Z	c	field_53959	prioritized
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175550:	f	Lhts$a;	d	field_53960	field_53960
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175551:	m	()V	a	method_22782	cancel
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175552:	m	(Lhpd;)Ljava/util/concurrent/Completa
+bleFuture;	a	method_22783	run
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175553:		p	1			buffers
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175554:	m	()Ljava/lang/String;	b	method_38556	g
+etName
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175555:	m	()Z	c	method_62976	isPrioritized
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175556:	m	()Lis;	d	method_62977	getOrigin
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175557:	m	(Lhts$a;Z)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175558:		p	2			prioritized
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175559:c	hts$a$b	net/minecraft/class_846$class_
+851$class_4578	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$Rebuil
+dTask
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175560:	f	Lhtn;	e	field_20838	region
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175561:	f	Lhts$a;	f	field_20839	field_20839
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175562:	m	(Lhtl;Ljava/lang/Void;Ljava/lang/Thro
+wable;)Lhts$b;	a	method_72053	method_72053
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175563:	m	(Lhts$a;Lhtn;Z)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175564:		p	3			prioritized
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175565:		p	2			region
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175566:c	hts$a$c	net/minecraft/class_846$class_
+851$class_4579	net/minecraft/client/render/chunk/ChunkBuilder$BuiltChunk$SortTa
+sk
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175567:	f	Lhts$a;	e	field_20840	field_20840
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175568:	f	Lhtl;	f	field_60950	renderData
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175569:	m	(Lhtt;Ljava/lang/Void;Ljava/lang/Thro
+wable;)Lhts$b;	a	method_72054	method_72054
+> C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175570:	m	(Lhts$a;Lhtl;)V	<init>	<init>	<init>
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175571:		p	2			data
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175572:c	hts$b	net/minecraft/class_846$class_46
+90	net/minecraft/client/render/chunk/ChunkBuilder$Result
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175573:	f	Lhts$b;	a	field_21438	SUCCESSFUL
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175574:	f	Lhts$b;	b	field_21439	CANCELLED
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175575:	f	[Lhts$b;	c	field_21440	field_21440
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175576:	m	()[Lhts$b;	a	method_36923	method_3692
+3
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175577:c	htt	net/minecraft/class_10196	net/mine
+craft/client/render/chunk/NormalizedRelativePos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175578:	f	I	a	field_54170	x
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175579:	f	I	b	field_54171	y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175580:	f	I	c	field_54172	z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175581:	m	()Z	a	method_64067	isOnCameraAxis
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175582:	m	(DI)I	a	method_64068	normalize
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175583:		p	2			sectionCoord
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175584:		p	0			cameraCoord
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175585:	m	(Lftm;J)Lhtt;	a	method_64069	of
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175586:		p	1			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175587:		p	0			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175588:	m	(Lftm;J)Lhtt;	b	method_64070	with
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175589:		p	1			cameraPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175590:		p	2			sectionPos
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175591:	m	(Ljava/lang/Object;)Z	equals	equals	e
+quals
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175592:		p	1			o
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175593:c	htu	net/minecraft/class_852	net/minecr
+aft/client/render/chunk/ChunkOcclusionDataBuilder
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175594:	f	I	a	field_32833	field_32833
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175595:	f	I	b	field_32834	field_32834
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175596:	f	I	c	field_32835	field_32835
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175597:	f	I	d	field_32836	field_32836
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175598:	f	I	e	field_32837	field_32837
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175599:	f	I	f	field_32838	field_32838
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175600:	f	I	g	field_32839	field_32839
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175601:	f	I	h	field_4477	STEP_X
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175602:	f	I	i	field_4476	STEP_Z
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175603:	f	I	j	field_4475	STEP_Y
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175604:	f	I	k	field_32840	field_32840
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175605:	f	[Liz;	l	field_4479	DIRECTIONS
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175606:	f	Ljava/util/BitSet;	m	field_4478	close
+d
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175607:	f	[I	n	field_4474	EDGE_POINTS
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175608:	f	I	o	field_4473	openCount
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175609:	m	()Lhtv;	a	method_3679	build
+  C:\Users\strai\.gradle\caches\fabric-loom\1.21.11\net.fabricmc.yarn.1_21_11.1
+.21.11+build.6-v2\mappings.tiny:175610:	m	(I)Ljava/util/Set;	a	method_3687	getO
+penFaces
+
+
+
